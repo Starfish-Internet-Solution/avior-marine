@@ -1,12 +1,12 @@
 <div id="<?=routes::getInstance()->getCurrentTopLevelPageID();?>_content_wrapper" class="clearfix">
 	<div class="topSection clearfix">
 		<div class="fleft">
+			<div><?=$this->displayElement('slider_text_editor')?></div>
 			<ul class="unstyled" id="slider">
 				<?$i=0;?>
 				<?foreach ($this->_XMLObj->slider->image_id as $image):?><!-- counts all image nodes present inside the slider tag -->
 					<?if($this->displayBackgroundImage($i)):?><!-- displays the image  if image_id != 0 -->
 						<li <?=$this->displayBackgroundImage($i); $active = ($i == 0) ? "class='active'" : ''; echo $active?>>
-							<a href="<?=$this->displayElement('image_link',$i)?>"></a>
 						</li>
 					<?endif;?>
 					<?$i++;?>
@@ -14,13 +14,13 @@
 			</ul>
 		</div>
 		<div class="fright">
-			<aside class="grayscale" style="background-image: url('/Project/Design/1_Website/Main_Layout/images/temporaryImages/2.png')"><a href="#"></a><h1 class="ArvilSans">SEAFARERS</h1></aside>
-			<aside class="grayscale" style="background-image: url('/Project/Design/1_Website/Main_Layout/images/temporaryImages/3.png')"><a href="#"></a><h1 class="ArvilSans">CAREERS &amp; Applications</h1></aside>
+			<aside class="grayscale" style="background-image: url('/Project/Design/1_Website/Main_Layout/images/temporaryImages/2.png')"><a href="/seafarers"></a><h1 class="ArvilSans">SEAFARERS</h1></aside>
+			<aside class="grayscale" style="background-image: url('/Project/Design/1_Website/Main_Layout/images/temporaryImages/3.png')"><a href="/careers"></a><h1 class="ArvilSans">APPLY</h1></aside>
 		</div>
 	</div>
 	<div class="bottomSection clearfix">
-		<aside class="grayscale" style="background-image: url('/Project/Design/1_Website/Main_Layout/images/temporaryImages/4.png')"><a href="#"></a><h1 class="ArvilSans">LATEST NEWS</h1></aside>
-		<aside class="grayscale" style="background-image: url('/Project/Design/1_Website/Main_Layout/images/temporaryImages/5.png')"><a href="#"></a><h1 class="ArvilSans">GALLERY</h1></aside>
+		<aside class="grayscale" style="background-image: url('/Project/Design/1_Website/Main_Layout/images/temporaryImages/4.png')"><a href="/news"></a><h1 class="ArvilSans">LATEST NEWS</h1></aside>
+		<aside class="grayscale" style="background-image: url('/Project/Design/1_Website/Main_Layout/images/temporaryImages/5.png')"><a href="/gallery"></a><h1 class="ArvilSans">GALLERY</h1></aside>
 		<aside class="grayscale" style="background-image: url('/Project/Design/1_Website/Main_Layout/images/temporaryImages/6.png')"><a href="#"></a><h1 class="ArvilSans">FLEET MANNED</h1></aside>
 	</div>
 </div>

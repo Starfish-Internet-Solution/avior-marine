@@ -1,6 +1,8 @@
 $(document).ready(function() {
 	// Rotating Image
 	rotateImage();
+	
+	Cufon.replace('.topSection p em, .topSection p:last-child', { fontFamily: 'HoeflerTitlingRoman' });	
 });
 
 function rotateImage(){

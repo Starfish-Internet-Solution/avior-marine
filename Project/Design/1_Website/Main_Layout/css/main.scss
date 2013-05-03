@@ -19,8 +19,7 @@ ul {
     display:block !important;
     position:relative;
     div[id*='content_wrapper']{
-      @include background(950px,auto,'');
-      
+      width:910px;
       background-color:#fff;
       background-position:center bottom !important;
       display:block !important;

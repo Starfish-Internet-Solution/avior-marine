@@ -43,10 +43,10 @@
 			</page>
 			<!-- ***************************************************************************************** -->
 			<page>
-				<page_id>fleet_managed</page_id>
-				<url_name>fleet-managed</url_name>
-				<link_title>fleet managed</link_title>
-				<link_text>FLEET MANAGED</link_text>
+				<page_id>fleet_manned</page_id>
+				<url_name>fleet-manned</url_name>
+				<link_title>fleet manned</link_title>
+				<link_text>FLEET MANNED</link_text>
 			</page>
 			<!-- ***************************************************************************************** -->
 			<page>

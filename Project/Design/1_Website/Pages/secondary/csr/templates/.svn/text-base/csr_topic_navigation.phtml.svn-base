@@ -1,6 +1,0 @@
-<h2 class="mLxl innerPageHeading">CSR</h2>
-<ul class="">
-	<?php foreach($this->_get('array_of_articles') as $article):?>
-		<li><a href="/csr/view/<?=$article->__get('permalink')?>"><?=$article->__get('article_title')?>  </a></li>
-	<?php endforeach?>
-</ul>

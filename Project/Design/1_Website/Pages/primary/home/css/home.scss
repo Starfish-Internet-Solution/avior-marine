@@ -2,7 +2,7 @@
 @import 'C:/WORKSPACE/avior/Project/Design/1_Website/Main_Layout/css/global';
 
 div[id*='content_wrapper']{
-  padding: 0 25px 22px !important;
+  padding: 0 7px !important;
   overflow:hidden;
   a{
     height:100%;width:100%;
@@ -23,21 +23,53 @@ div[id*='content_wrapper']{
     }
   }
   .topSection{
-    margin-bottom:10px;
-    height:373px;
+    margin-bottom:7px;
+    height:470px;
     overflow:hidden;
     >div.fleft{
       width:635px;
-      height:373px;
+      height:470px;
       color:#FFFFFF;
       overflow:hidden;
+      >div{
+        position: absolute;
+        z-index: 1000;
+        right: 0;
+        top: 0;
+        width: 260px;
+        p{
+          font-size:1.3em !important;
+          line-height:15px !important;
+          &:first-child{
+            margin:0;
+            em:first-child{
+              font-size: 22px !important;
+              display: block;
+              margin: 15px 0 16px;
+            }
+            strong{
+              font-size: 43px !important;
+              display: block;
+              margin: 10px 0;
+            }
+            em:last-child{
+              font-size: 50px !important;
+              display: block;
+              margin: 15px 24px 0;
+            }
+          }
+          &:last-child{
+            width: 240px;
+          }
+        }
+      }
       ul{
         padding:0;margin:0;
         li{
           position:absolute;
           top:0;
           left:0;
-          height:373px;
+          height:470px;
           width:100%;
           padding: 205px 0 141px 547px;
           opacity:0;
@@ -61,14 +93,14 @@ div[id*='content_wrapper']{
     }
     >div.fright{
       >aside{
-        border:1px solid #CCC;
+        //border:1px solid #CCC;
         width:254px;
         &:first-child{
-          height:218px;
+          height:280px;
           margin-bottom: 6px;
         }
         &:last-child{
-          height:149px;
+          height:202px;
         }
       }
     }
@@ -80,23 +112,23 @@ div[id*='content_wrapper']{
     }
   }
   .bottomSection{
-    height:172px;
+    height:215px;
     overflow:hidden;
     >aside{
-      border:1px solid #CCC;
-      height:172px;
+      //border:1px solid #CCC;
+      height:207px;
       width:225px;
       float:left;
       &:first-child{
         width:472px !important;
-        margin-right:9px;
+        margin-right:7px;
         h1{
           left:25px;
         }
       }
       &:last-child{
         width:185px !important;
-        margin-left:9px;
+        margin-left:7px;
         h1{
           left:10px;
         }

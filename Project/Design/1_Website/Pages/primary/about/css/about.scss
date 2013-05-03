@@ -19,6 +19,16 @@
     color: rgb(0, 64, 104);
     text-transform: capitalize;
   }
+  #back{
+    top: -15px;
+    position: relative;
+    margin-bottom:15px;
+    color: rgb(0, 64, 104);
+    font:{
+      family:'arial', verdana , sans-serif;
+      size:12px;
+    }
+  }
   div {
     .aboutAvior {
       height:auto;
@@ -64,6 +74,9 @@
         color:$textGray;
         list-style:disc !important;
         font-size:1.2em;
+      }
+      ul{
+        margin:0;
       }
     }
   }

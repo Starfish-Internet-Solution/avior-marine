@@ -1,7 +1,7 @@
 .newsContentWrap { 
   min-height: 100px;
-  padding: 30px;
-  width: 720px;  
+  padding: 30px 25px;
+  width: 680px;  
   
   h5 {
      margin-bottom:15px !important; }
@@ -19,7 +19,7 @@
         background-size:cover;
         background-repeat:no-repeat; }
       .newsContent {
-        width:470px;
+        width:450px;
       }
           h3 { 
             font-size:1.8em; 
@@ -31,7 +31,7 @@
           div.newsText {
             margin-bottom: 10px;
             p{
-              width:470px;
+              //width:450px;
               line-height: 18px !important;
               a { font-size:1em !important; }
             }
