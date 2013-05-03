@@ -1,0 +1,14 @@
+<div id="product_editor" class="fleft pVl pRl pLm" style="color:black;">
+	<div class="pBxxl">
+		<?if ($this->_get('product')->__get('product_id') != NULL):?>
+
+		<textarea class='editor' name="url_name"><?=$this->_get('product')->__get('url_name')?></textarea>
+		
+		<?else:?>
+			<div class="fwB fc_starfish_gray3 pointer" id="noImage">No Product to display.</div>
+		<?endif;?>
+	</div>
+</div>
+
+
+<!-- USED FOR INSTANTIATING A NEW IMAGE -->

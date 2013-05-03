@@ -1,0 +1,12 @@
+<div id="file_editor" class="fleft pVl pRl pLm" style="color:black;">
+		
+		<?if ($this->_get('product')->__get('product_id') != NULL):?>
+				<input type="file" name="file" />	
+		
+		<a href="/files/product/viewDownloadable/view/<?=$this->_get('product')->__get('product_id')?>"><?=$this->_get('product')->__get('link_title')?></a>
+	
+		<?else:?>
+			<div class="fwB fc_starfish_gray3 pointer" id="noImage">No Product to display.</div>
+		<?endif;?>
+</div>
+

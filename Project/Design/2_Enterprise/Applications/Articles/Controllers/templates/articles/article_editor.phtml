@@ -1,0 +1,31 @@
+<?php $article = $this->_get('article'); //var_dump($article);?>
+<div id="product_editor" class="fleft pVl pRl pLm" style="color:black; font-size:14px;">
+	<?php if($article->__get('article_id') != null):?>
+	<form id="products_editor_form">
+		
+		<?php if(routes::getInstance()->getCurrentTopLevelURLName() == 'articles'):?>
+		<div id="product_photos" class="fleft posRel">
+			<h4 class="fc_starfish_gray4 mBs fleft clearfix">Article Photos</h4><br /><br />
+					<?$i = 1;?>
+					<div id="gallery_image_<?=$i?>" class="clearfix posRel">
+						<div class="image_holder fleft mRl">
+							<div id="image_overflow">
+							   	<div id="img" style="background-image:url('<?=$this->_get('thumbnail_path')?>')" class="has_image"></div>
+							</div>
+						</div>
+			            <span class="show_photo_chooser productPhoto fleft sprite posAbs" id="gallery_image_<?=$i?>"></span>
+						<input class="image_id" type="hidden" name="image_id" value="<?=$article->__get('image_id')?>">
+						<input class="gallery_image_id" type="hidden" name="gallery_image_id[]" value="">
+					</div>
+		</div>
+		<?php endif?>
+	
+		<h4 class="fc_starfish_gray4 mBs mTxl ">Description: </h4>
+		<textarea name="description" class="editor"><?=$article->__get('intro')?></textarea> 
+		
+		<br/><br/><br/>
+	</form>
+	<?php else:?>
+		<div class="fwB fc_starfish_gray3 pointer" id="noImage">No Article to display.</div>
+	<?php endif?>
+</div>

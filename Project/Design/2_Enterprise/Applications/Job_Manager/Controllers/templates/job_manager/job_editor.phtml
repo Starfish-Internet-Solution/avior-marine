@@ -1,0 +1,42 @@
+<div class="fright" style="color:black;">
+	<b id="add_job" class="pointer"> + Add Job</b>
+</div>
+<br/>
+<?php if($this->_get('array_of_jobs') == null):?>
+	<div class="fwB fc_starfish_gray3 pointer" id="noImage">No Job to display.</div>
+	<?php else:?>
+
+	<div style="color:black;" class="clearfix">
+		<table width="100%" id="jobsTable">
+			<thead> 
+				<tr>
+					<th width="25%">Title</th>
+					<th width="25%">Published</th>
+					<th width="25%">Date Published</th>
+					<th width="25%">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+			<?php foreach($this->_get('array_of_jobs') as $job):?>
+				<tr id="<?=$job->getJobID()?>">
+					<td><?=$job->getTitle()?></td>
+					<td>
+						<?php if($job->getIsPublished() == 0):?>
+							<input type="checkbox" name="is_published" value="<?=$job->getIsPublished()?>" />	
+						<?else:?>
+							<input type="checkbox" name="is_published" value="<?=$job->getIsPublished()?>" checked/>
+						<?php endif?>
+					</td>
+					<td><?=date("Y-m-d", strtotime($job->getDatePublished()))?></td>
+					<td>
+						<!-- this is used for editing -->
+						<input type='hidden' name="description" value="<?=$job->getDescription()?>" />
+						<span class="edit_job">Edit</span><span class="delete_job"> Delete </span>
+					</td>
+				</tr>
+			<?php endforeach?>
+			</tbody>
+		</table>
+	</div>
+	
+<?php endif?>

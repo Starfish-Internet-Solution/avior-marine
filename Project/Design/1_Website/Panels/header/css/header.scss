@@ -1,0 +1,43 @@
+/************************************** HEADER **************************************/
+@import 'C:/WORKSPACE/avior/Project/Design/1_Website/Main_Layout/css/global';
+
+header{
+  background:{
+    color:$blue;
+  }
+  >section{
+    width:922px;
+    margin:0 auto;
+  }
+}
+/************************************** NAVIGATION DEFAULTS **************************************/
+#primary_nav {
+  list-style:none;
+  display: table;
+  float: left;
+  table-layout: fixed;
+  padding:0;
+  margin: 60px 0 0;
+
+  li {
+    display:table-cell;
+    width: auto;
+    //border-right:1px solid #A7A9AC;
+    &.last {
+      //border:none !important;
+    }
+    a {
+      text-align: center;
+      padding: 0 10px;
+      font-size:2.1em;
+      margin: 0 15px;
+      display:block;
+      color:#FFFFFF;
+    }
+    &.active{
+      a{
+        color:#FFFFFF;
+      }
+    }
+  }
+}
