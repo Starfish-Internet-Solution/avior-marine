@@ -1,0 +1,112 @@
+/** NEWS CSS ******************************************************************/
+@import 'C:/WORKSPACE/avior/Project/Design/1_Website/Main_Layout/css/global';
+ul {
+  padding:0;
+  margin:0;  
+  li {
+    float:left;
+    margin-bottom:30px;
+  }
+} 
+#gallery_content_wrapper  {
+  padding:0 !important;
+   p.galleryText {
+    text-align:center;
+  } 
+  .galleryListTopWrap {
+    width:900px;
+    margin:0 auto;
+      ul.galleryListing {
+        clear:both;
+        height:auto;
+        overflow:auto;
+        li {
+          width:300px;
+          height:197px;    
+          padding-left: 15px;
+          padding-right: 15px;
+          a {
+            background-color: #E6E7E8;
+            display: block;
+            height: 197px;
+            padding: 4px;
+            position: relative;
+              span.albumImage {
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 188px;
+                width: 262px;
+                position: absolute;
+                top: 5px;
+              }
+              span.albumTitle {
+                background-image: url("/Project/Design/1_Website/Pages/primary/gallery/images/gallery-pointer-img.png");
+                background-position: -7px 0;
+                border: medium none !important;
+                border-radius: 0 0 0 0 !important;
+                bottom: 4px;
+                color: #FFFFFF;
+                font-size: 1.5em;
+                height: 35px;
+                padding: 8px;
+                position: absolute;
+                text-align: left;
+                width: 262px;
+              }
+           }
+        }  
+     }
+  }
+   //IMAGE LISTING FOR SELECTED ALBUM CSS
+  .albumImageWrap {
+    width:900px;
+    margin:0 auto;
+    a {
+      font-size:1.2em;
+      color:#000; }
+    h2 {
+      margin-top:10px;
+    }  
+    ul.imageListing {
+      clear:both;
+      height:auto;
+      overflow:auto;  
+      li {
+        background-color: #E6E7E8;
+        height: 160px;
+        width: 215px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 3px;
+        span.albumImage {
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 154px;
+          width: 208px;       
+        }
+      }    
+    }
+  } 
+}
+//PAGINATION
+#pagination {
+  width:100%;
+  height:auto;
+  overflow:auto;
+  ul {
+    margin:0 auto;
+    height:auto;
+    overflow:auto;
+    li {
+      padding:5px 10px;
+      margin-right:15px;
+      border:1px solid #ccc;
+      a {
+        font-weight:bold;
+      }
+    }
+    li.current {
+      
+    }
+  }
+}

@@ -1,0 +1,28 @@
+/** NEWS CSS ******************************************************************/
+@import 'C:/WORKSPACE/avior/Project/Design/1_Website/Main_Layout/css/global';
+
+.topicDetailsWrap {
+  padding:30px;
+  width:720px;
+  min-height:100px;
+  b { 
+    font-size:1.4em; 
+  }
+  p { 
+    font-size:1.2em; 
+  }
+  a { 
+    clear: both;
+    float: left;
+    color:#58585B;
+    font-size: 1.2em;
+    margin-left:50px;
+    margin-bottom: 35px;
+    text-decoration: underline;
+  }
+    .topicImages {
+      float:left;
+      height:200px;
+      width:295px;
+    }
+}

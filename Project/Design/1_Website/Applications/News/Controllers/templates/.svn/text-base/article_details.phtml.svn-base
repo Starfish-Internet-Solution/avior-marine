@@ -1,0 +1,7 @@
+<? $news = $this->_get('article'); ?>
+<h5><?=$news->__get('article_title');?></h5>
+<b><?=date('l, F d',  strtotime($news->__get('date_created')));?></b>
+
+<div class="fright newsDetail newsListing">
+	<?=$news->__get('intro'); ?>
+</div>

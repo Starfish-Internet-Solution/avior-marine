@@ -1,0 +1,123 @@
+<!-- ******************************		NOTES    ***************************** -->
+<!-- Navigational links are grouped together into how they will be grouped together on the page							--> 
+<!-- Primary Navigation are the most important links of the website 													-->
+<!-- if you dont want the home page link on the primary navigation because its the logo then put it in the SXXDD 		-->
+
+<!-- *******************************	OPTIONS   ****************************************************-->
+<!-- default ="true display default page for website-->
+<!-- language ="en" -->
+<!-- frontend ="hide" if set to page - folder is not required in Design-->
+<!-- cms ="hide" hide page from CMS side navigation-->
+<!-- xml ="default" display default xml page for CMS-->
+<!-- **************************************************************************************************-->
+<pages>
+	<!-- ******************************		Primary Navigation    ************************************ -->
+	<navigation_group>
+		<navigation_group_id>primary</navigation_group_id>
+		<page default="true"  language="en" xml ="default">
+				<page_id>home</page_id>
+				<url_name>home</url_name>
+				<link_title>Home</link_title>
+				<link_text>Home</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		<page>
+			<page_id>about</page_id>
+			<url_name>about-us</url_name>
+			<link_title>about us</link_title>
+			<link_text>ABOUT US</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		<page cms="hide">
+			<page_id>seafarers</page_id>
+			<url_name>seafarers</url_name>
+			<link_title>seafarers</link_title>
+			<link_text>SEAFARERS</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		<page frontend="hide" cms="hide">
+			<page_id>careers</page_id>
+			<url_name>careers</url_name>
+			<link_title>careers</link_title>
+			<link_text>CAREERS</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		<page cms="hide" frontend="hide">
+			<page_id>news</page_id>
+			<url_name>news</url_name>
+			<link_title>news</link_title>
+			<link_text>NEWS</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		<page cms="hide">
+			<page_id>gallery</page_id>
+			<url_name>gallery</url_name>
+			<link_title>gallery</link_title>
+			<link_text>GALLERY</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+	</navigation_group>
+	
+	<!-- **********************************		Secondary Navigation    ******************************* -->	
+	<navigation_group>
+		<navigation_group_id>secondary</navigation_group_id>
+		<page cms="hide" frontend="hide">
+			<page_id>links</page_id>
+			<url_name>links-and-downloads</url_name>
+			<link_title>links &amp; downloads</link_title>
+			<link_text>Links &amp; Downloads</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		<page cms="hide">
+			<page_id>csr</page_id>
+			<url_name>csr</url_name>
+			<link_title>csr</link_title>
+			<link_text>CSR</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		<page>
+			<page_id>contact</page_id>
+			<url_name>contact</url_name>
+			<link_title>contact us</link_title>
+			<link_text>Contact Us</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		<page>
+			<page_id>faq</page_id>
+			<url_name>frequently-asked-questions</url_name>
+			<link_title>faq</link_title>
+			<link_text>FAQ</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+	</navigation_group>
+	
+	<!-- **********************************		tertiary Navigation    ******************************* -->	
+	<navigation_group>
+		<navigation_group_id>tertiary</navigation_group_id>
+		<!-- ***************************************************************************************** -->
+		<page>
+			<page_id>privacy</page_id>
+			<url_name>privacy-policy</url_name>
+			<link_title>privacy policy</link_title>
+			<link_text>Privacy Policy</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		<page>
+			<page_id>accessibility</page_id>
+			<url_name>accessibility</url_name>
+			<link_title>accessibility</link_title>
+			<link_text>Accessibility</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		<page frontend="hide" cms="hide">
+			<page_id>design</page_id>
+			<url_name>design</url_name>
+			<link_title>starfish internet solutions</link_title>
+			<link_text>Web Design</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		
+	</navigation_group>
+	
+</pages>
+<!-- **************************************************************************************************-->

@@ -1,0 +1,53 @@
+<div id="<?=routes::getInstance()->getCurrentTopLevelPageID();?>_content_wrapper">
+	<div class="topInnerBanner">
+		<h1 class="pageHeading">Careers</h1>
+	</div>
+	<div class="careersListingDetailWrap clearfix">
+		<h2 class="">APPLICATION</h2>
+		<form action="POST" class="applicationForm" enctype="multipart/form-data">
+			<!-- FULL NAME -->
+			<div class="clearfix row">
+				<label>Full Name *</label>
+				<input type="text" name="name"/>
+			</div>
+			<!-- DESIRED POSITION -->
+			<div class="clearfix row">
+				<label>Desired Position *</label>
+				<select name="desiredPosition">
+					<option>1</option>
+				</select>
+			</div>
+			<!-- MOBILE -->
+			<div class="clearfix row">
+				<label>Mobile *</label>
+				<input type="text" name="mobile"/>
+			</div>
+			<!-- EMAIL -->
+			<div class="clearfix row">
+				<label>Email *</label>
+				<input type="email" name="email"/>
+			</div>
+			<!-- ATTACHED CS / RESUME -->
+			<div class="clearfix row">
+				<label>Attach CV / Resume*</label>
+				<input type="hidden" name="maxFileSize" value="30000" />
+				<input type="file" name="attachedFile"/>
+				<div class="fakeFileUpload">
+					<span class="fileName"></span>
+					<div class="browseBtn align_c">
+						BROWSE
+					</div>
+				</div>
+			</div>	
+			<!-- MESSAGE -->
+			<div class="clearfix row">
+				<label>Message</label>
+				<textarea name="message"></textarea>
+			</div>
+			<!-- SEND -->	
+			<div class="clearfix row align_c">
+				<input type="submit" value="submit" class=""/>
+			</div>				
+		</form>
+	</div>
+</div>	

@@ -1,0 +1,121 @@
+/************************************** MAIN **************************************/
+@import 'C:/WORKSPACE/avior/Project/Design/1_Website/Main_Layout/css/global';
+ul {
+  padding:0;
+  margin:0;
+  li {
+    list-style:none;
+  }
+}
+#wrapper {
+  background-color:#ffffff;
+  width:100%;
+  > div[id*='_container']{
+    @include background(100%,'auto',$containerBackground,repeat-x);
+    background:{
+      position:center bottom !important;
+      color:#FFFFFF;
+    }
+    display:block !important;
+    position:relative;
+    div[id*='content_wrapper']{
+      @include background(950px,auto,'');
+      
+      background-color:#fff;
+      background-position:center bottom !important;
+      display:block !important;
+      position:relative;
+      min-height:300px;
+      margin:0 auto;
+      h2 { 
+        color:#004068; 
+        font-size:3.0em; } 
+      p { line-height:23px; }
+    }
+  }
+}
+//INNER PAGES TOP BANNER
+.topInnerBanner {
+  height:137px;
+  background-image:url('/Project/Design/1_Website/Main_Layout/images/backgrounds/top-banner.png');
+  background-position:0 -1px;
+  text-align:center;
+  padding-top:40px;
+  h1.pageHeading {
+    font-size:4.4em;
+    color:#fff;
+  }
+  
+}
+h2.innerPageHeading { 
+  font-size:3.0em; 
+  margin-bottom:30px; }
+//INNER PAGES LEFT NAVIGATION
+.topicListWrap {
+  width:230px;
+  min-height:100px;
+  padding:30px 0px 30px 0px;
+  background-color:#E6E7E8;
+  ul {
+    background-color:#E6E7E8;
+    li {
+      cursor:pointer;
+      width:100%;
+      height:30px;
+      padding:5px 2px 2px 30px;
+      border-bottom: 1px solid #C7C8CA;
+      a {
+        color:#58585B;
+        font-size:1.2em; }
+    }
+    >li:first-child{
+      border-top: 1px solid #C7C8CA;
+    }
+    //ACTIVE
+    li.active {
+      background-color:#404041;
+      a {
+        color:#fff;
+        font-weight:bold;
+        }
+      }
+    // li:last-of-type {
+      // border-bottom:1px solid #A7A9AB;}
+    
+    //HOVER 
+    li:hover {
+      background-color:#404041;
+      a {
+        color:#fff; }      
+    }
+  }  
+} 
+
+.grayscale {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+ 
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  
+  //***********************  Firefox 10+ ************************************//
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); 
+//*********************** IE6-9 ************************************//
+    filter: gray;
+    
+  &:hover {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+  }
+}
+
+
+//** Start of SPRITES ***********************************************************************//

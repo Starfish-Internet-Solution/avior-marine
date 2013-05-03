@@ -1,0 +1,32 @@
+
+
+<div itemscope itemtype="http://schema.org/ItemList">
+
+<?php if($this->_get('is_latest')):?>
+	<h2 itemprop="name" class="innerPageHeading">LATEST</h2>
+<?php else:?>
+	<?php if($this->_get('current_archive_month')):?>
+		<h2 itemprop="name" class="innerPageHeading"><?=$this->_get('current_archive_month')." ".$this->_get('current_archive_year') ?></h2>
+		<?php else:?>
+			<h2 itemprop="name" class="innerPageHeading">ALL</h2>
+	<?php endif?>
+<?php endif?>
+
+
+<? foreach($this->_get('array_of_articles') as $news) {  ?>
+	<div class="fright newsListing" itemscope itemtype="http://schema.org/Article">
+		<div class="fleft newsImage" style="background-image:url('/Data/Images/<?=$news->__get('image_path'); ?>');"></div>
+		<meta itemprop="image" content="/Data/Images/<?=$news->__get('image_path'); ?>"/>
+		<div class="fright newsContent">
+			<p itemprop="dateCreated"><?=$news->__get('date_created'); ?></p>
+			<h3 itemprop="name"><?=$news->__get('article_title'); ?></h3>
+			<meta itemprop="itemListElement" content="<?=$news->__get('article_title'); ?>"/>
+			<div class="newsText">
+				<?=preg_replace('/\s+?(\S+)?$/', '', substr($news->__get('intro'), 0, 220));?>&nbsp;...
+				
+				<a itemprop="url" href="/news/<?=$news->__get('permalink'); ?>">Read More.</a>
+			</div>
+		</div>
+	</div>
+<? } ?>
+</div>

@@ -1,0 +1,20 @@
+<!-- outer wrapper start-->
+<div id="outer_wrapper" class="clearfix">
+	<!-- inner start -->
+	<div id="contentColumn" class="clearfix">
+	
+		<div id="applicationHeader" class="clearfix mBxl">
+			<h3>FILES</h3>
+			<span class="sprite2 fright uploadFile mHm">ADD PDF</span>
+		</div>
+		
+		<div id="applicationContent" class="clearfix">
+			<form method='post' id="delete_pdf_form" action='/<?=routes::getInstance()->getCurrentTopLevelURLName()?>/<?=routes::getInstance()->getCurrentTopLevelURLName()?>/delete'>
+				%%CONTENT_COLUMN%%
+			</form>
+		</div>
+	<!-- inner end -->
+	</div>
+</div>
+<!-- outer wrapper end-->
+	%%UPLOAD_DIALOG%%

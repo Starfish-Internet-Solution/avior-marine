@@ -1,0 +1,80 @@
+#leftColumn #heading h4 {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+#leftColumn #heading input[type="submit"] {
+  background-image: url("/Project/Design/2_Enterprise/Applications/Job_Manager/Main_App_Layout/images/btnStrip.png");
+  border: 2px solid #cccccc;
+  color: #333333;
+  font-weight: bold;
+  height: 32px;
+  margin-top: 15px;
+  width: 121px; }
+
+#contentColumn {
+  padding-right: 20px;
+  padding-top: 20px; }
+  #contentColumn table#jobsTable {
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 15px; }
+    #contentColumn table#jobsTable th {
+      background-color: #242424;
+      color: #fff;
+      font-size: 12px;
+      padding: 10px;
+      border: 1px solid #cccccc; }
+    #contentColumn table#jobsTable tr {
+      height: 33px !important;
+      font-size: 12px; }
+    #contentColumn table#jobsTable tr:nth-of-type(2n+1) {
+      background-color: #F1F1F1; }
+    #contentColumn table#jobsTable td {
+      padding: 10px;
+      border: 1px solid #cccccc; }
+      #contentColumn table#jobsTable td a {
+        float: left; }
+      #contentColumn table#jobsTable td span {
+        float: left;
+        margin-right: 40px;
+        cursor: pointer; }
+      #contentColumn table#jobsTable td span.has_conflict {
+        color: #A11D24; }
+      #contentColumn table#jobsTable td span.is_available {
+        margin-right: 14px; }
+      #contentColumn table#jobsTable td span#response_span {
+        font-weight: bold;
+        margin-right: 50px; }
+
+.addJobDialog, .editJobDialog {
+  margin-left: -275px;
+  width: 550px;
+  padding: 25px 22px 10px; }
+  .addJobDialog h3, .editJobDialog h3 {
+    color: #8CC63F;
+    margin-bottom: 25px;
+    font-size: 14px;
+    font-weight: lighter;
+    position: relative;
+    padding-left: 30px; }
+    .addJobDialog h3 > img, .editJobDialog h3 > img {
+      position: absolute;
+      left: 0px; }
+  .addJobDialog input[type="text"], .editJobDialog input[type="text"] {
+    width: 380px !important; }
+  .addJobDialog textarea, .editJobDialog textarea {
+    width: 380px !important;
+    height: 200px !important; }
+  .addJobDialog #button_container, .editJobDialog #button_container {
+    width: 173px; }
+    .addJobDialog #button_container input.sprite, .editJobDialog #button_container input.sprite {
+      width: 81px;
+      height: 31px;
+      background-position: -904px -40px; }
+      .addJobDialog #button_container input.sprite:active, .editJobDialog #button_container input.sprite:active {
+        background-position: -904px -6px; }
+    .addJobDialog #button_container span.sprite, .editJobDialog #button_container span.sprite {
+      width: 81px;
+      height: 31px;
+      background-position: -373px -40px; }
+      .addJobDialog #button_container span.sprite:active, .editJobDialog #button_container span.sprite:active {
+        background-position: -373px -6px; }

@@ -1,0 +1,46 @@
+10
+
+dir
+117
+http://192.168.0.100/projects/avior/Project/Code/1_Website/Pages/primary
+http://192.168.0.100/projects/avior
+
+
+
+2013-04-26T03:09:06.343750Z
+109
+starfish
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+dbe559c9-3d01-0010-8d57-37aa76a797cc
+
+about
+dir
+
+careers
+dir
+
+gallery
+dir
+
+home
+dir
+
+news
+dir
+
+seafarers
+dir
+

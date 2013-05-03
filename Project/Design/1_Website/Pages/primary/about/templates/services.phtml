@@ -1,0 +1,12 @@
+<div id="<?=routes::getInstance()->getCurrentTopLevelPageID();?>_content_wrapper">
+	<div class="topInnerBanner">
+		<h1 class="pageHeading">About Avior Marine</h1>
+	</div>
+	<div class="bottomSection clearfix">
+		<h1><?=strtolower(routes::getInstance()->getCurrentSubLevelLinkText())?></h1>
+		<?=$this->displayImage(0)?>
+		<div id="content" class="clearfix pAxl mBxxl mTm">
+			<?=$this->displayElement('page_content_editor')?>
+		</div>
+	</div>
+</div>

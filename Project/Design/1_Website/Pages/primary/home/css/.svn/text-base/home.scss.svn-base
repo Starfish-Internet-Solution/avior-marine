@@ -1,0 +1,111 @@
+/** HOME CSS ******************************************************************/
+@import 'C:/WORKSPACE/avior/Project/Design/1_Website/Main_Layout/css/global';
+
+div[id*='content_wrapper']{
+  padding: 0 25px 22px !important;
+  overflow:hidden;
+  a{
+    height:100%;width:100%;
+    display:inline-block;
+    position:absolute;
+    top:0;left:0;
+    z-index:10;
+  }
+  div,aside {
+    position:relative;
+    background:{
+      repeat:no-repeat;
+      position:center;
+      size:cover;
+    }
+    h1{
+      color:#FFFFFF;
+    }
+  }
+  .topSection{
+    margin-bottom:10px;
+    height:373px;
+    overflow:hidden;
+    >div.fleft{
+      width:635px;
+      height:373px;
+      color:#FFFFFF;
+      overflow:hidden;
+      ul{
+        padding:0;margin:0;
+        li{
+          position:absolute;
+          top:0;
+          left:0;
+          height:373px;
+          width:100%;
+          padding: 205px 0 141px 547px;
+          opacity:0;
+          z-index:1;
+          background:{
+            size:cover;
+          }
+          &.active{
+            z-index:4;
+            opacity:1;
+          }
+          &.previous{
+            z-index:2;
+          }
+        }
+      }
+      a{
+        position:relative !important;
+        @include sprite(90px, 45px, -2px, -4px, 'no-hover', $buttonSprites);
+      }
+    }
+    >div.fright{
+      >aside{
+        border:1px solid #CCC;
+        width:254px;
+        &:first-child{
+          height:218px;
+          margin-bottom: 6px;
+        }
+        &:last-child{
+          height:149px;
+        }
+      }
+    }
+    h1{
+      position:relative;
+      text-align: right;
+      top:30px;
+      right:25px;
+    }
+  }
+  .bottomSection{
+    height:172px;
+    overflow:hidden;
+    >aside{
+      border:1px solid #CCC;
+      height:172px;
+      width:225px;
+      float:left;
+      &:first-child{
+        width:472px !important;
+        margin-right:9px;
+        h1{
+          left:25px;
+        }
+      }
+      &:last-child{
+        width:185px !important;
+        margin-left:9px;
+        h1{
+          left:10px;
+        }
+      }
+    }
+    h1{
+      position:relative;
+      top:30px;
+      left:20px;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+#leftColumn {
+  #heading {
+    h4 {
+      margin-top:10px;
+      margin-bottom:10px;
+    }
+    input[type="submit"] {
+      background-image: url("/Project/Design/2_Enterprise/Applications/Job_Manager/Main_App_Layout/images/btnStrip.png");
+      border: 2px solid #CCCCCC;
+      color: #333333;
+      font-weight: bold;
+      height: 32px;
+      margin-top: 15px;
+      width: 121px;      
+    }  
+  }
+}
+#contentColumn {
+  padding-right: 20px;
+  padding-top:20px;
+  table#jobsTable {
+    text-align:left;
+    margin-top:30px;
+    margin-bottom:15px;
+    th {
+      background-color:#242424;
+      color:#fff;
+      font-size:12px;
+      padding:10px;
+      border:1px solid #ccc; }
+    tr {
+      height:33px !important;
+      font-size:12px; }
+    tr:nth-of-type(2n+1) {
+      background-color:#F1F1F1;
+    }
+    td {
+      padding:10px;
+      border:1px solid #ccc;
+        a { float:left; }  
+        span {
+          float:left;
+          margin-right:40px; 
+          cursor:pointer; }     
+        span.has_conflict { color:#A11D24; } 
+        span.is_available { margin-right:14px; }
+        span#response_span {  font-weight:bold; margin-right:50px; }
+    }     
+  }
+}
+//POP UPS CSS
+.addJobDialog, .editJobDialog {
+  margin-left: -275px;
+  width: 550px;
+  padding: 25px 22px 10px;
+  h3{
+    color:#8CC63F;
+    margin-bottom:25px;
+    font-size: 14px;
+    font-weight: lighter;
+    position: relative;
+    padding-left: 30px;
+    > img{
+      position: absolute;
+      left: 0px;
+      }
+  }
+  input[type="text"] {
+    width:380px !important; }  
+  textarea {
+    width:380px !important;
+    height:200px !important; }
+  #button_container{
+    width:173px;
+    input.sprite{
+        width:81px;
+        height:31px;
+        background-position: -904px -40px;
+        &:active{
+          background-position: -904px -6px;
+        }
+      }
+      span.sprite{
+        width:81px;
+        height:31px;
+        background-position: -373px -40px;
+        &:active{
+          background-position: -373px -6px;
+        }
+     }
+  }
+}

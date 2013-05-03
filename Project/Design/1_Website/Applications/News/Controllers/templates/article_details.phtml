@@ -1,0 +1,9 @@
+<div itemscope itemtype="http://schema.org/Article">
+	<? $news = $this->_get('article'); ?>
+	<h5 itemprop="name"><?=$news->__get('article_title');?></h5>
+	<b itemprop="dateCreated"><?=date('l, F d',  strtotime($news->__get('date_created')));?></b>
+	
+	<div itemprop="articleBody" class="fright newsDetail newsListing">
+		<?=$news->__get('intro'); ?>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/projects/avior/!svn/ver/106/Project/Design/2_Enterprise/Applications/Photo_Library/Controllers/templates/albums
+END
+new_album_dialog.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/projects/avior/!svn/ver/1/Project/Design/2_Enterprise/Applications/Photo_Library/Controllers/templates/albums/new_album_dialog.phtml
+END
+albums_content_column.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/projects/avior/!svn/ver/1/Project/Design/2_Enterprise/Applications/Photo_Library/Controllers/templates/albums/albums_content_column.phtml
+END
+albums_listing.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/projects/avior/!svn/ver/106/Project/Design/2_Enterprise/Applications/Photo_Library/Controllers/templates/albums/albums_listing.phtml
+END
+album_holder.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/projects/avior/!svn/ver/1/Project/Design/2_Enterprise/Applications/Photo_Library/Controllers/templates/albums/album_holder.phtml
+END
+album_header.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/projects/avior/!svn/ver/1/Project/Design/2_Enterprise/Applications/Photo_Library/Controllers/templates/albums/album_header.phtml
+END

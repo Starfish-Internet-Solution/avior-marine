@@ -1,0 +1,110 @@
+@import 'C:/WORKSPACE/avior/Project/Design/1_Website/Main_Layout/css/global';
+ 
+.careersListingDetailWrap {
+  width:775px;
+  margin:30px auto;
+  b { font-size:1.4em; }
+  p { font-size:1.2em; } 
+   
+  .careersListing {
+    border-bottom:2px solid #ccc;
+    padding:20px 20px 40px 20px;
+    pre {
+    font-family:arial;
+    font-size:1.2em;
+    height: 133px;
+    line-height: 23px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    overflow: hidden; }
+    .quickApply {
+      height:20px;
+      width:105px;
+      padding-top:2px;
+      background-color:#404041;
+      text-align:center;
+      font-size:1.2em;
+      font-weight:bold;
+      color:#fff;
+    }
+    ul {
+      li {
+        list-style:disc;
+      }
+    }
+  }
+  //// APPLICATION ////
+  h2 {
+    font-size:3.0em;
+    text-align:center; }
+  .applicationForm {
+    width:440px;
+    height:730px;
+    margin:0 auto;
+      .row {
+        margin-bottom:5px;
+        position:relative;
+        label {
+          margin:5px 0px;
+          display:block;
+          font-size:1.8em;
+          color:#939597;
+        }  
+        input[type="text"], select, input[type="email"], textarea, input[type="file"] {
+          width:100%;
+          height:33px;
+          border:1px solid #ccc;
+          font-size:1.4em;
+        }
+        input[type="file"] {
+          cursor: pointer;
+          float: right;
+          opacity:0;
+          position: relative;
+          width: 235px;
+          z-index:3;
+        }
+        .fakeFileUpload {
+          height:33px;
+          width:100%;
+          position:relative;
+          border:1px solid #ccc;
+          .fileName {
+            font-size: 1.6em;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+          }
+          .browseBtn {
+            position:absolute;
+            height:31px;
+            width:100px;
+            font-size:1.5em;
+            background-color:#808284;
+            padding-top:6px;
+            right:0;
+          }
+        }
+        select { padding-top:5px; }
+        textarea {
+          height:255px;
+        }
+        input[type="submit"] {
+          margin-top:15px;
+          width:95px;
+          height:32px;
+          background-color:#222222;
+          font-size:1.8em;
+          color:#fff;
+        }
+        //ERROR MESSAGE
+        label.error {
+          color: #A11D24;
+          font-size:1.2em;
+          position: absolute;
+          right:5px;
+          top:5px;          
+        }
+      }
+  }
+}

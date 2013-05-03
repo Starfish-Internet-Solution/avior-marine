@@ -1,0 +1,22 @@
+<div id="<?=routes::getInstance()->getCurrentTopLevelPageID();?>_content_wrapper">
+	<div class="topInnerBanner">
+		<h1 class="pageHeading">Frequently Asked Question</h1>
+	</div>
+	<div class="clearfix">
+		<div class="fleft topicListWrap">
+			%%LINKS_LIST%%
+		</div>
+		<?php if($this->_get('article_details')):?>
+		<div class="fright topicDetailsWrap">
+			<h2 class="innerPageHeading"><?=$this->_get('article_details')->__get('product_title')?></h2>
+			<?=$this->_get('article_details')->__get('url_name')?>
+		</div>
+		<?php else:?>
+			<?php foreach($this->_get('array_of_downloadables') as $downloadables):?>
+					<a href="/links-and-downloads/viewDownloadables/file_id/<?=$downloadables->__get('pdf_id')?>"><?=$downloadables->__get('filename')?> </a>	<br />
+			<?php endforeach?>
+		<?php endif?>
+	</div>
+</div>
+
+<br />

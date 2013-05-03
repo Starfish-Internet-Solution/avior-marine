@@ -1,0 +1,15 @@
+<h2 class="mLxl innerPageHeading">LINKS</h2>
+<ul class="mBxxl">
+	<?php foreach($this->_get('link_nav_listing') as $nav):?>
+		<li><a href="/links-and-downloads/view/<?=$nav->__get('permalink')?>"> <?=$nav->__get('product_title')?></a> </li>
+	<?php endforeach?>
+</ul>
+
+<h2 class="mLxl innerPageHeading">DOWNLOADS</h2>
+<ul class="">
+	<? for($i=1; $i<=4; $i++) { ?>
+	<li>
+		<a href="">Topic 1</a>
+	</li>
+	<? } ?>
+</ul>

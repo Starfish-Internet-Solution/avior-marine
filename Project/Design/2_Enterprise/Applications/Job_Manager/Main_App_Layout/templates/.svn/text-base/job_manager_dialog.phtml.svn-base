@@ -1,0 +1,60 @@
+<!--- ADD JOB ---->
+<div class="addJobDialog popupDialog">
+	<h3>
+		<img src="/Project/Design/2_Enterprise/Applications/Products/Main_App_Layout/images/plus.png" />
+		Add Job
+	</h3>
+	<form method="post" action="/job-manager/job-manager/add">
+		<div>
+			<div class="mBm clearfix">
+				<strong>Title</strong>
+				<input class="validate[required,maxlength[45]] fright" type="text" name="title" maxlength="45">
+			</div>
+			<div class="clearfix">
+				<strong>Description</strong>
+				<textarea name="description" class="fright"></textarea>
+			</div>
+		</div> 
+		<div id="button_container" class="fright mBs">
+			<input type="submit" class="sprite fleft mRs mTs" name="add_job" value=" ">
+			<span class="sprite mTs fleft pointer closeDialog" title="cancel"></span>		
+		</div>
+	</form>
+</div>
+<!--- DELETE PRODUCT POP UP ---->
+<div class="deleteJob popUp_delete popupDialog">
+	<span class="deleteText fc_starfish_gray8 fwB">Are you sure you want to <span class="fc_starfish_red">DELETE</span> this Job?</span>
+	<div id="button_container" class="clearfix">
+		<form method="POST" action="" id="delete_job_form">
+			<input class="sprite fleft delete_subcategory_confirm pointer mTs" title="Delete this article" type="submit" name="delete_article" value=" ">
+			<span class="sprite fright closeDialog pointer mTs"></span>
+		</form>
+	</div>
+</div>
+<!--- EDIT JOB POP UP ----> 
+<div class="editJobDialog popupDialog">
+	<h3>
+		<img src="/Project/Design/2_Enterprise/Applications/Products/Main_App_Layout/images/plus.png" />
+		Edit Jobs
+	</h3>
+	<form method="post" id="edit_job_form" action="">
+		<div>
+			<div class="mBm clearfix">
+				<strong>Title</strong>
+				<input class="validate[required,maxlength[45]] fright" type="text" name="title" maxlength="45">
+			</div>
+			<div class="mBm clearfix">
+				<strong>Description</strong>
+				<textarea name="description" class="fright"></textarea>
+			</div>
+			<div class="clearfix">
+				<strong>Date Published:</strong>
+				<input class="validate[required,maxlength[45]] fright published_date" type="text" name="date_published" maxlength="45">
+			</div>
+		</div>
+		<div id="button_container" class="fright mBs">
+			<input type="submit" class="sprite fleft mRs mTs" value="">
+			<span class="sprite mTs fleft pointer closeDialog"></span>		
+		</div>		
+	</form>
+</div>

@@ -1,0 +1,11 @@
+<div class="pTl pLl pRl" id="heading">
+	<h3>Filter</h3>
+	<form method="POST" action="/job-manager/job-manager/filter" style="color:black">
+		<h4 class="fc_starfish_gray6">Title:</h4>
+		<input type="text" name="title_filter" class="w100"/>
+		<br/>
+		<h4 class="fc_starfish_gray6">Date Publised:</h4>
+		<input type="text" name="date_published_filter" class="published_date w100"/><br>
+		<input type="submit" name="filter" value="search" class="fright"/>
+	</form>
+</div>

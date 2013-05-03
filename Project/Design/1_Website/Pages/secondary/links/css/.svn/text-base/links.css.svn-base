@@ -1,0 +1,28 @@
+/** NEWS CSS ******************************************************************/
+.sprite {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-color: transparent; }
+
+.topicDetailsWrap {
+  padding: 30px;
+  width: 720px;
+  min-height: 100px; }
+  .topicDetailsWrap b {
+    font-size: 1.4em; }
+  .topicDetailsWrap p {
+    font-size: 1.2em; }
+  .topicDetailsWrap a {
+    clear: both;
+    float: left;
+    color: #58585B;
+    font-size: 1.2em;
+    margin-left: 50px;
+    margin-bottom: 35px;
+    text-decoration: underline; }
+  .topicDetailsWrap .topicImages {
+    float: left;
+    height: 200px;
+    width: 295px; }

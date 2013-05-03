@@ -1,0 +1,39 @@
+/** NEWS CSS ******************************************************************/
+@import 'C:/WORKSPACE/avior/Project/Design/1_Website/Main_Layout/css/global';
+
+.topicDetailsWrap {
+  padding:30px;
+  width:720px;
+  min-height:100px;
+  b { 
+    font-size:1.4em; 
+  }
+  p { 
+    font-size:1.2em;
+    position:relative;
+    padding-left:50px;
+    min-height: 35px;
+    display: block;
+    line-height: 35px !important;
+  }
+  a { 
+    clear: both;
+    color:#58585B;
+    font-size: 1.2em;
+    margin-bottom: 35px;
+    text-decoration: underline;
+    &[href*="file"]{
+      display:block;
+      margin: 5px 0;
+    }
+  }
+    .topicImages {
+      float:left;
+      height:200px;
+      width:295px;
+    }
+  img[src*="links"]{
+   position:absolute;
+   left:0;
+  }
+}
