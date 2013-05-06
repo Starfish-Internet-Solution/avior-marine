@@ -29,11 +29,35 @@ $(window).load(function(){
 	album_id	= '';
 	size_id		= '';
 	image_id	= '';
-	texteditor = false;
+	texteditor	= false;
 	editor		= '';
+	pdf			= '';
 	
 //-------------------------------------------------------------------------------------------------
 
+//show pdf chooser
+	
+	$('#chnagePDF').live("click", (function(){
+//		$.php('/ajax/pdf-library/pdfChooser');
+		$.php('/ajax/cms/pdfChooser',{});
+		pdf = $(this).closest('.pdfList').attr('id');
+		
+		php.complete = function(){
+			$('#pdfChooser ').show();
+		}
+	}));
+	$('.usePdf').live("click",function(){
+		var pdf_ID = $('#pdfChooser input[type="radio"]:checked').val();
+		var pdf_Name = $('#pdfChooser input[type="radio"]:checked').attr('data-name');
+		if(pdf_ID != null){
+			$('#'+pdf+' #pdf_name').html(pdf_Name);
+			$('#'+pdf+' input[type="hidden"]').attr('name',pdf_ID);
+			$('#'+pdf+' input[type="hidden"]').val(pdf_ID);
+			$('#pdfChooser').fadeOut(150, function(){
+				$('#pdfChooser').html('');
+			});
+		}
+	})
 
 //show photo chooser
 	$('span.show_photo_chooser,img.show_photo_chooser,a.cke_button__image').live('click',function(){

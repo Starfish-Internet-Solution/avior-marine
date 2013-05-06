@@ -2,18 +2,7 @@ Array
 (
     [0] => Parameters Array - array(1) {
   [0]=>
-  string(12) "pages_editor"
+  string(10) "pdfChooser"
 }
 
-    [1] => <span style="color: green">$string - <pre>string(8) "Homepage"
-<pre></span>
-    [2] => <span style="color: green">$string - <pre>string(1) "."
-<pre></span>
-    [3] => <span style="color: green">$string - <pre>string(2) "40"
-<pre></span>
-    [4] => <span style="color: green">$string - <pre>string(496) "<p><strong>MLC accreditation Bureau Veritas</strong></p>
-
-<p>Two to three liner description of MLC accreditation Bureau Veritas followed by download link of PDF. &nbsp;Two to three liner description of MLC accreditation Bureau Veritas followed by download link of PDF. &nbsp;Two to three liner description of MLC accreditation Bureau Veritas followed by download link of PDF. &nbsp;Two to three liner description of MLC accreditation Bureau Veritas followed by download link of PDF.&nbsp;</p>
-"
-<pre></span>
 )

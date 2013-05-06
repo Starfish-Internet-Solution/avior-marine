@@ -101,7 +101,7 @@ class pdf
 					";
 			$pdo_statement = $con->prepare($sql);
 			$pdo_statement->bindParam(':pdf_id', $pdf_id, PDO::PARAM_INT);
-			$pdo_statement->execute();
+			return $pdo_statement->execute();
 			
 		}
 		catch(PDOException $e)

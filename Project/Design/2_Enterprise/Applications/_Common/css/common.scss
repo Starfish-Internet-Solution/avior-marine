@@ -347,7 +347,54 @@
     }
   }
 }
-    
+ /************************* PDF CHOOSER ************************************/    
+#pdfChooser{
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 35px;
+  display: none;
+  min-height: 100%;
+  border-radius: 3px;
+  position: absolute;
+  background-color: white;
+  h3{
+    color: #333333;
+    max-width: 355px;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    margin-bottom:50px;
+  }
+      table{
+        td{
+          min-height:45px;
+          width:270px;
+          padding:15px 0;
+          margin: 0 0 25px 10px;
+          background:{
+            image:url('/Project/Design/2_Enterprise/Main_Layout/images/pdf-icon.png');
+            repeat:no-repeat;
+            position:20px top;
+          }
+          div{
+            padding-left:45px;
+            color:#333333;
+            font-size:14px;
+            &.radio{
+              padding:0;
+            }
+            &.pdfName{
+              float:right !important;
+              width:240px;
+              p{
+                font-weight:bold;
+              }
+            }
+          }
+        }
+      }
+    }   
 /************************* PHOTO CHOOSER ************************************/
 #photo_chooser {
   top: 0;
@@ -494,7 +541,15 @@
     }
   }
 }       
-        
+.cancel{
+  height:31px;
+  width: 81px;
+  display:inline-block;
+  background-position: -1656px -40px;
+  &:active{
+    background-position: -1656px -6px;
+  }
+}        
 /* pop up dialogs ****************************************************************************************/
 #popUp_background {
   top:0;
@@ -666,6 +721,47 @@
     }
   }
 }
+
+.pdf_link #chnagePDF {
+position: relative;
+top: -20px;
+cursor: pointer;
+display: inline-block;
+font-size: 0px;
+background-position: -3264px -38px;
+width: 124px;
+height: 31px;
+z-index: 995;
+}
+
+.pdf_link #pdf_name {
+color: #333333;
+min-height: 45px;
+display: inline-block;
+min-width: 270px;
+padding: 15px 0 15px 55px;
+margin: 5px;
+background-image: url("/Project/Design/2_Enterprise/Main_Layout/images/pdf-icon.png");
+background-repeat: no-repeat;
+background-position: 3px top;
+}
+
+.usePdf{
+  display:inline-block;
+  font-size:0px;
+  background:{
+    position:-3132px -38px;
+  }
+  width:124px;
+  height:31px;
+  z-index:995;
+  &:active{
+    background:{
+    position:-3132px -6px;
+    }
+  }
+}
+
 select[id*="formats"]{
   width:110px;
 }

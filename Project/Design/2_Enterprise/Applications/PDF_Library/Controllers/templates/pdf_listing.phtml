@@ -22,7 +22,7 @@
 							<div class="pdfName"><p><?=$pdf->__get('filename');?></p></div>
 							<p><input type="checkbox"  name="pdf" value="<?=$pdf->__get('pdf_id');?>"/><span class="notUsed"></span></p>
 						</label>
-						<span id="delete" data-id="<?=$pdf->__get('pdf_id');?>">Delete File</span>
+						<span id="delete" data-filename="<?=$pdf->__get('path');?>" data-id="<?=$pdf->__get('pdf_id');?>">Delete File</span>
 						<?php endif?>
 				</td>
 			<?php endforeach?>

@@ -1,8 +1,10 @@
 <div class="popupDialog popUp_delete">
-	<form>
+	<form method="POST" action="files/files/delete">
 		<span class="deleteText fwB">Are you sure you want to <span class="fc_starfish_red">DELETE</span> this PDF?</span>
 		<div id="button_container">
-			<input type="hidden" name="" value=""/>
+			<input type="hidden" name="hidden_file_id" value=""/>
+			<input type="hidden" name="hidden_path" value=""/>
+			
 			<input class="sprite fleft mTs" title="delete this pdf" type="submit" value="delete" name="delete">
 			<span class="sprite fright keep_pdf pointer mTs cancel" title="keep this pdf"></span>
 		</div>

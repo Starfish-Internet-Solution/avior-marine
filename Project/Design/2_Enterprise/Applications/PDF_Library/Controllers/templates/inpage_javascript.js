@@ -25,7 +25,7 @@ $(document).ready(function() {
 	});
 	
 	$("input[name='pdf']").click(function(){
-		id = $(this).val();
+	id = $(this).val();
 		
 		if($(this).attr('checked') == 'checked'){
 			status = 1
@@ -39,24 +39,19 @@ $(document).ready(function() {
 		}
 		
 		$.php('/ajax/files/updateStatus', {id:id, status:status});
-		
-		php.complete = function(){
-			deleteFile();
-		};
-		
 	});
-
-	deleteFile();
 	
-});	
-function deleteFile(){
-	$('span[id="delete"]').click(function(){
+	$('span[id="delete"]').live("click", (function(){
 		i = $(this).attr('data-id');
-		$('.popUp_delete').find('input[type="hidden"]').val(i);
+		path = $(this).attr('data-filename');
+		
+		$('.popUp_delete').find('input[type="hidden"][name="hidden_file_id"]').val(i);
+		$('.popUp_delete').find('input[type="hidden"][name="hidden_path"]').val(path);
 		
 		if($('.popUp_delete').find('input[type="hidden"]').val() != '')
 		{
 			$('.popUp_delete,#popUp_background').fadeIn();
 		}
-	});
-}
+	}));
+	
+});	

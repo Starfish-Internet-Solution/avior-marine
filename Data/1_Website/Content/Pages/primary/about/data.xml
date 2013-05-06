@@ -8,9 +8,9 @@
 
 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 ]]></page_content_editor>
-
+	<pdf_link>hey</pdf_link>
 	<welcome>
-		<image_id>18</image_id>
+		<image_id>12</image_id>
 	</welcome>
 	
 	<services>

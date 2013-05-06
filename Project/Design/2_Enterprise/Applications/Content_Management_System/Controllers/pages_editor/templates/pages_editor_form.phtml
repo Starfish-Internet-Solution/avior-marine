@@ -19,8 +19,17 @@
 					<span class="show_photo_chooser fleft sprite posAbs" id="node_<?=$i?>"></span>
 					</div>
 			</div>
+			
+			
+		   <!--IF NODE IS A PDF-->
+		  <?elseif($node['name'] === 'pdf_link'):?>
+			<div class="pdfList pdf_link image_group" id="pdf_<?=$i?>">
+				<span id="pdf_name"><?=$node['name']?></span>
+				<span class="sprite2 mRxl" id="chnagePDF">change pdf</span>
+				<input type="hidden" name="" value="<?=$node['value']?>"/>
+			</div>
+			
 			<?$i++;?>
-		      
 		  <?else:$count = 0;?>
 			<div class="clearfix pTm">
 			<?$clean_description = array('_','editor')?>

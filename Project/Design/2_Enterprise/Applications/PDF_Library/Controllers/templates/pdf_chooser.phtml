@@ -1,3 +1,4 @@
+<h3>PDF FILES</h3>
 <div class="clearfix">
 	<?$increment = 1;?>
 	 <table>
@@ -9,7 +10,7 @@
 					<?endif; ?>
 					<td class="fleft">
 						<label>
-							<input type="radio" name="pdf" value="<?=$pdf->__get('pdf_id');?>"/>
+							<input type="radio" name="pdf" data-name="<?=$pdf->__get('filename');?>" value="<?=$pdf->__get('pdf_id');?>"/>
 							<div class="pdfName"><p><?=$pdf->__get('filename');?></p></div>
 						</label>
 					</td>

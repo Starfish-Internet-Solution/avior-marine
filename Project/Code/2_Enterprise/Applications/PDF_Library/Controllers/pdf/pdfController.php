@@ -28,7 +28,16 @@ class pdfController extends applicationsSuperController
 		{
 			//set path to save and accepted image types
 			$path 			= STAR_SITE_ROOT."/Data/pdf";
-			$accepted_types = array();
+			$accepted_types = array(					
+					'text/plain',
+					'application/pdf',
+					'application/msword',
+					'application/rtf',
+					'application/vnd.ms-excel',
+					'application/vnd.ms-powerpoint',
+					'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+					'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+					'application/vnd.openxmlformats-officedocument.presentationml.presentation');
 			$filename  		= $_FILES['file']['name']; 
 			$ext 			= strstr($_FILES['file']['name'], '.');
 			$pathName		= md5(time().$_FILES['file']['name']).$ext;
@@ -54,7 +63,15 @@ class pdfController extends applicationsSuperController
 	
 	public function deleteAction()
 	{
-		pdf::delete($_POST['pdf']);
+		
+		$delete = pdf::delete($_POST['hidden_file_id']);
+
+		$hidden_path = $_POST['hidden_path'];
+		
+		if(file_exists("Data/pdf/$hidden_path"))
+		{
+			unlink("Data/pdf/$hidden_path");
+		}
 		
 		header('location: /'.routes::getInstance()->getCurrentTopLevelURLName().'');
 	}
