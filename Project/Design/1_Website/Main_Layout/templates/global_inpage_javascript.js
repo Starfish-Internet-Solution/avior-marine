@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(window).load(function(){
 	Cufon.replace('.HoeflerTitlingRoman,#footer ul li span a, h1.pageHeading', { fontFamily: 'HoeflerTitlingRoman' });
 	Cufon.replace('.ArvilSans,#primary_nav li span a', { fontFamily: 'Arvil Sans' });
 	
@@ -15,15 +15,17 @@ $(document).ready(function(){
 function stickyFooter()
 {
 	var container = $('#wrapper > div[id*="_container"]');
+	var bannerHeight = $('#wrapper .topInnerBanner');
 	var contentWrapper = $('#wrapper div[id*="_content_wrapper"]');
-	var windowHeight = $(window).height();
-	var footerHeight = $('footer').height();
-	var headerHeight = $('header').height();
-	var containerHeight = contentWrapper.height();
+	var windowHeight = $(window).outerHeight();
+	var footerHeight = 27;
+	var headerHeight = $('header').outerHeight();
 	
-	$('footer').css({'position':'relative'});
+	var containerHeight = contentWrapper.outerHeight() + bannerHeight.outerHeight();
+	
 	var totalPageHeight = footerHeight + headerHeight + containerHeight ;
 	if(totalPageHeight < windowHeight){
+		$('footer').css({'position':'relative'});
 		var adjustedContainerHeight = windowHeight - (headerHeight + footerHeight);
 		container.css({'height':adjustedContainerHeight});
 	}

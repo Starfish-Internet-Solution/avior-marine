@@ -11,10 +11,10 @@ ul {
   background-color:#ffffff;
   width:100%;
   > div[id*='_container']{
-    @include background(100%,'auto',$containerBackground,repeat-x);
+    @include background(100%,auto,$containerBackground,repeat-x);
     background:{
-      position:center bottom !important;
-      color:#FFFFFF;
+      position:center top !important;
+      color:#7A7B7E;
     }
     display:block !important;
     position:relative;
