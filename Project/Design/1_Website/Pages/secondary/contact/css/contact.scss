@@ -3,7 +3,8 @@
 
 .contactUsWrapper {
   width:775px;
-  margin:30px auto;  
+  margin:0px auto 30px; 
+  padding-top:30px;
   b { font-size:1.4em; }
   p { font-size:1.2em; } 
   
@@ -32,6 +33,10 @@
             padding-left:5px;
             border:1px solid #ccc;
             font-size:1.4em;
+            color:#A9A9BB;
+          }
+          select{
+            color:#A9A9BB;
           }
           textarea {
             height:210px;
