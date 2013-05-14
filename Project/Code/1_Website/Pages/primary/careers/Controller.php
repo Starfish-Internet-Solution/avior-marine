@@ -14,6 +14,12 @@ class controller extends controllerSuperClass_Core
 		$view->_XMLObj = $XML;
 		
 		$view->_set('array_of_jobs', $model->getPositions());
+		
+		// need code to get image path from array of image ids
+		// get image ids from model
+		// current solution may not be the best one - image and content
+		// for pages should be on one page
+		
 		$view->renderAll();
 	}
 }
