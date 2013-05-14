@@ -15,8 +15,13 @@ class controller extends controllerSuperClass_Core
 		if($url_parameters != 'about')
 			$XML = $model->loadDataSimpleXML($url_parameters);
 		else
+		{
 			$XML = $model->loadDataSimpleXML('data');
+			$view->setArrayofImages($model->getImages());
+		}
 		
+		
+		$model->getImages();
 		$view->_XMLObj = $XML;
 		$view->dipslayBanner();
 		$view->renderAll();

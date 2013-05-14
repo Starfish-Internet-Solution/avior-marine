@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <data>
+	<cover_photo>
+		<image_id>12</image_id>
+	</cover_photo>
 	<metadata>
 		<page_title_element>Avior Marine - Services</page_title_element>
 		<meta_description>.</meta_description>

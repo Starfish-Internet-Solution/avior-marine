@@ -3,40 +3,41 @@
 		<?=$this->displayElement('page_content_editor'); ?>
 	</div>
 	<div class="bottomSection clearfix">
+		<?$image_path = $this->getArrayofImages()?>
 		<div class="clearfix">
 			<a href="/about-us/welcome" class="aboutAvior grayscale">
 				<span class="topPointer show">WELCOME</span>
-				<?=$this->displayImage('0'); ?>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[0]?>')"></span>
 			</a>
 			<a href="/about-us/services" class="aboutAvior grayscale">
 				<span class="topPointer show">SERVICES</span>
-				<?=$this->displayImage('1'); ?>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[1]?>')"></span>
 			</a>
 			<a href="/about-us/fleet-manned" class="aboutAvior grayscale">
 				<span class="topPointer show">FLEET MANNED</span>
-				<?=$this->displayImage('2'); ?>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[2]?>')"></span>
 			</a>
 			<a href="/about-us/accreditations" class="aboutAvior grayscale last">
 				<span class="topPointer show">ACCREDITATIONS</span>
-				<?=$this->displayImage('3'); ?>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[3]?>')"></span>
 			</a>
 		</div>
 		<div class="clearfix mTxl">
 			<a href="/about-us/company-profile" class="aboutAvior grayscale">
 				<span class="topPointer show">COMPANY PROFILE</span>
-				<?=$this->displayImage('4'); ?>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[4]?>')"></span>
 			</a>
 			<a href="/about-us/quality-policy" class="aboutAvior grayscale">
 				<span class="topPointer show">QUALITY POLICY</span>
-				<?=$this->displayImage('5'); ?>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[5]?>')"></span>
 			</a>
 			<a href="/about-us/business-ethics" class="aboutAvior grayscale">
 				<span class="topPointer show">BUSINESS ETHICS</span>
-				<?=$this->displayImage('6'); ?>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[6]?>')"></span>
 			</a>
 			<a href="/about-us/mlc-2006" class="aboutAvior grayscale last">
 				<span class="topPointer show">MLC-2006</span>
-				<?=$this->displayImage('7'); ?>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[7]?>')"></span>
 			</a>
 		</div>
 	</div>

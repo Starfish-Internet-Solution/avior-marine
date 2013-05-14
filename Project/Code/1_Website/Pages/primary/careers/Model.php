@@ -28,7 +28,7 @@ class model extends modelSuperClass_Core
 		foreach ($this->files as $file)
 		{
 			$xml_data = simplexml_load_file($this->file_dir.$file.'.xml');
-			$image->__set('image_id', $xml_data->image_id);
+			$image->__set('image_id', $xml_data->cover_photo->image_id);
 			$image->selectFullPath();
 			
 			$this->array_of_images[] = '/Data/Images/'.$image->__get('full_path');

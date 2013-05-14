@@ -9,37 +9,4 @@
 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 ]]></page_content_editor>
 	<pdf_link>hey</pdf_link>
-	<welcome>
-		<image_id>12</image_id>
-	</welcome>
-	
-	<services>
-		<image_id>14</image_id>
-	</services>
-
-	<fleet_managed>
-		<image_id>12</image_id>
-	</fleet_managed>
-		
-	
-	<accreditations>
-		<image_id>16</image_id>	
-	</accreditations>
-	
-	<company_profile>
-		<image_id>15</image_id>	
-	</company_profile>
-	
-	<quality_policy>
-		<image_id>13</image_id>	
-	</quality_policy>
-	
-	<business_ethics>
-		<image_id>17</image_id>	
-	</business_ethics>
-	
-	<mlc_2006>
-		<image_id>12</image_id>		
-	</mlc_2006>
-	
 </data>
