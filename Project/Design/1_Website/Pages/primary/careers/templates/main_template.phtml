@@ -1,26 +1,44 @@
-<div id="<?=routes::getInstance()->getCurrentTopLevelPageID();?>_content_wrapper">
-	<!-- 
-	<div class="topInnerBanner">
-		<h1 class="pageHeading">Careers</h1>
+<div id="<?=routes::getInstance()->getCurrentTopLevelPageID();?>_content_wrapper" class="pVl">
+	<div class="topSection clearfix align_c">
+		<?/*$this->displayElement('page_content_editor'); */?>
 	</div>
-	<div class="careersListingDetailWrap clearfix">
-		<div class="headingText">
-			<h2 class="heading mBs">Working at Avior</h2>
-			<p>Insert a three to four liner introduction about working for the company.  Describe the work environment, expectationsof the company and other requirements, etc.  insert a three to four liner introduction about working for the company.  Describe the work environment, expectationsof the company, etc.  insert a three to four liner introduction about working for the company. </p>
-			<h2 class="jobOpening mTl ">JOB OPENINGS</h2>
+	<div class="bottomSection clearfix">
+		<?$position = $this->_get('array_of_jobs');?>
+		<div class="clearfix">
+			<a href="/careers/quick-apply" class="aboutAvior grayscale">
+				<span class="topPointer show">QUICK APPLY</span>
+				<span class="imageContainer" <?=$this->displayBackgroundImage(0)?>></span>
+			</a>
+			<a href="/careers/online-application" class="aboutAvior grayscale">
+				<span class="topPointer show">ONLINE APPLICATION</span>
+				<span class="imageContainer" <?=$this->displayBackgroundImage(1)?>></span>
+			</a>
+			<a href="/careers/<?=$position[0]?>" class="aboutAvior grayscale">
+				<span class="topPointer show"><?=$position[0]?></span>
+				<span class="imageContainer" <?=$this->displayBackgroundImage(2)?>></span>
+			</a>
+			<a href="/careers/<?=$position[1]?>" class="aboutAvior grayscale last">
+				<span class="topPointer show"><?=$position[1]?></span>
+				<span class="imageContainer" <?=$this->displayBackgroundImage(3)?>></span>
+			</a>
 		</div>
-		
-		<? foreach($this->_get('array_of_jobs') as $jobs) {  ?>
-		<div class="careersListing">
-			<b>
-			<?=$jobs->getTitle(); ?>
-			</b>
-			<pre class="">
-			<?=$jobs->getDescription(); ?>
-			</pre>
-			<a href="/careers/<?=$jobs->getPermalink(); ?>" class="quickApply fright show">Quick Apply</a>
+		<div class="clearfix mTxl">
+			<a href="/careers/<?=$position[2]?>" class="aboutAvior grayscale">
+				<span class="topPointer show"><?=$position[2]?></span>
+				<span class="imageContainer" <?=$this->displayBackgroundImage(4)?>></span>
+			</a>
+			<a href="/careers/<?=$position[3]?>" class="aboutAvior grayscale">
+				<span class="topPointer show"><?=$position[3]?></span>
+				<span class="imageContainer" <?=$this->displayBackgroundImage(5)?>></span>
+			</a>
+			<a href="/careers/<?=$position[4]?>" class="aboutAvior grayscale">
+				<span class="topPointer show"><?=$position[4]?></span>
+				<span class="imageContainer" <?=$this->displayBackgroundImage(6)?>></span>
+			</a>
+			<a href="/careers/office-vacancies" class="aboutAvior grayscale last">
+				<span class="topPointer show">OFFICE VACANCIES</span>
+				<span class="imageContainer" <?=$this->displayBackgroundImage(7)?>></span>
+			</a>
 		</div>
-		<? } ?>
 	</div>
-	 -->
 </div>

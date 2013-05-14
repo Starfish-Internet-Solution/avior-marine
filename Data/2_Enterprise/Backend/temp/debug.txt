@@ -1,12 +1,8 @@
 Array
 (
-    [0] => Parameters Array - array(3) {
+    [0] => Parameters Array - array(1) {
   [0]=>
-  string(8) "articles"
-  [1]=>
-  string(4) "edit"
-  [2]=>
-  string(2) "20"
+  string(12) "pages_editor"
 }
 
 )

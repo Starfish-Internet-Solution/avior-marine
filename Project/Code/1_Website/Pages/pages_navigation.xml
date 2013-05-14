@@ -92,11 +92,60 @@
 			<link_text>SEAFARERS</link_text>
 		</page>
 		<!-- ***************************************************************************************** -->
-		<page frontend="hide" cms="hide">
+		<page>
 			<page_id>careers</page_id>
 			<url_name>careers</url_name>
 			<link_title>careers</link_title>
 			<link_text>CAREERS</link_text>
+			
+			<page>
+				<page_id>quick_apply</page_id>
+				<url_name>quick-apply</url_name>
+				<link_title>quick apply</link_title>
+				<link_text>QUICK APPLY</link_text>
+			</page>
+			<page>
+				<page_id>online_application</page_id>
+				<url_name>online-application</url_name>
+				<link_title>online application</link_title>
+				<link_text>ONLINE APPLICATION</link_text>
+			</page>
+			<page>
+				<page_id>office_vacancies</page_id>
+				<url_name>office-vacancies</url_name>
+				<link_title>office vacancies</link_title>
+				<link_text>OFFICE VACANCIES</link_text>
+			</page>
+			<page>
+				<page_id>position1</page_id>
+				<url_name>position1</url_name>
+				<link_title>position1</link_title>
+				<link_text>position1</link_text>
+			</page>
+			<page frontend="hide">
+				<page_id>position2</page_id>
+				<url_name>position2</url_name>
+				<link_title>position2</link_title>
+				<link_text>position2</link_text>
+			</page>
+			<page frontend="hide">
+				<page_id>position3</page_id>
+				<url_name>position3</url_name>
+				<link_title>position3</link_title>
+				<link_text>position3</link_text>
+			</page>
+			<page frontend="hide">
+				<page_id>position4</page_id>
+				<url_name>position4</url_name>
+				<link_title>position4</link_title>
+				<link_text>position4</link_text>
+			</page>
+			<page frontend="hide">
+				<page_id>position5</page_id>
+				<url_name>position5</url_name>
+				<link_title>position5</link_title>
+				<link_text>position5</link_text>
+			</page>
 		</page>
 		<!-- ***************************************************************************************** -->
 		<page cms="hide" frontend="hide">

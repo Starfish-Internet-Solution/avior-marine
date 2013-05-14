@@ -18,7 +18,7 @@
 					<input class="image_id" type="hidden" name="<?=$i?>" value="<?=$node['value']?>">
 					<span class="show_photo_chooser fleft sprite posAbs" id="node_<?=$i?>"></span>
 					</div>
-			</div>
+			</div><?$i++;?>
 			
 			
 		   <!--IF NODE IS A PDF-->
@@ -32,7 +32,7 @@
 			<?$i++;?>
 		  <?else:$count = 0;?>
 			<div class="clearfix pTm">
-			<?$clean_description = array('_','editor')?>
+			<?$clean_description = array('_','editor','element')?>
 				<span class="element_description fleft pTxs"><?=str_replace($clean_description, ' ', $node['name'])?></span>
 				
 				<?if($node['value'] !== ''):?>
