@@ -30,7 +30,7 @@ class newsController extends applicationsSuperController
 			}
 			else
 			{
-				$this->getArticleListing(FALSE, TRUE);
+				$this->getArticleListing(FALSE);
 			}
 		}
 		elseif(count($this->url_parameters) >= 1)
@@ -39,7 +39,8 @@ class newsController extends applicationsSuperController
 			$this->getArticleListing(TRUE);
 		}
 		else
-			$this->getArticleListing(FALSE);
+			$this->getArticleListing(FALSE, TRUE);
+		
 	
 		$articlesView->displayMainContent();
 	}

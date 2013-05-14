@@ -56,7 +56,7 @@ class articlesView extends applicationsSuperView
 		$content = '';
 		$url_parameter = routes::getInstance()->_pathInfoArray;
 		
-		$content .= '<li  '.((end($url_parameter) ==  'latest') ? 'class="active"' : "").'><a href="/news/latest" class="fwB">LATEST</a></li>';
+		$content .= '<li  '.((end($url_parameter) ==  'news') ? 'class="active"' : "").'><a href="/news" class="fwB">LATEST</a></li>';
 		
 		foreach ($this->array_of_archives as $archive):
 			if($this->current_archive_month == strtolower($archive['month']) && $this->current_archive_year == $archive['year'])
@@ -70,7 +70,7 @@ class articlesView extends applicationsSuperView
 				$content .= '<li '.$active.'><a href="/news/archive/'.strtolower($archive['month']).'/'.$archive['year'].'"><span class="gray_arrow"></span>'.$archive['month'].' '.$archive['year'].'</a></li>';
 				
 		endforeach;
-		$content .= '<li '.((end($url_parameter) ==  'news') ? 'class="active"' : "").'><a href="/news" class="fwB">ALL</a></li>';
+		$content .= '<li '.((end($url_parameter) ==  'all') ? 'class="active"' : "").'><a href="/news/all" class="fwB">ALL</a></li>';
 		
 		return $content;
 	}

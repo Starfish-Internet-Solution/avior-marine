@@ -2,7 +2,7 @@ Array
 (
     [0] => Parameters Array - array(1) {
   [0]=>
-  string(12) "pages_editor"
+  string(10) "xml_editor"
 }
 
 )
