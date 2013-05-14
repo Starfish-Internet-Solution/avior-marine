@@ -1,43 +1,43 @@
 <div id="<?=routes::getInstance()->getCurrentTopLevelPageID();?>_content_wrapper" class="pVl">
 	<div class="topSection clearfix align_c">
-		<?/*$this->displayElement('page_content_editor'); */?>
 	</div>
 	<div class="bottomSection clearfix">
 		<?$position = $this->_get('array_of_jobs');?>
+		<?$image_path = $this->_get('array_of_images');?>
 		<div class="clearfix">
 			<a href="/careers/quick-apply" class="aboutAvior grayscale">
 				<span class="topPointer show">QUICK APPLY</span>
-				<span class="imageContainer" <?=$this->displayBackgroundImage(0)?>></span>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[0]?>')"></span>
 			</a>
 			<a href="/careers/online-application" class="aboutAvior grayscale">
 				<span class="topPointer show">ONLINE APPLICATION</span>
-				<span class="imageContainer" <?=$this->displayBackgroundImage(1)?>></span>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[1]?>')"></span>
 			</a>
 			<a href="/careers/<?=$position[0]?>" class="aboutAvior grayscale">
 				<span class="topPointer show"><?=$position[0]?></span>
-				<span class="imageContainer" <?=$this->displayBackgroundImage(2)?>></span>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[2]?>')"></span>
 			</a>
 			<a href="/careers/<?=$position[1]?>" class="aboutAvior grayscale last">
 				<span class="topPointer show"><?=$position[1]?></span>
-				<span class="imageContainer" <?=$this->displayBackgroundImage(3)?>></span>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[3]?>')"></span>
 			</a>
 		</div>
 		<div class="clearfix mTxl">
 			<a href="/careers/<?=$position[2]?>" class="aboutAvior grayscale">
 				<span class="topPointer show"><?=$position[2]?></span>
-				<span class="imageContainer" <?=$this->displayBackgroundImage(4)?>></span>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[4]?>')"></span>
 			</a>
 			<a href="/careers/<?=$position[3]?>" class="aboutAvior grayscale">
 				<span class="topPointer show"><?=$position[3]?></span>
-				<span class="imageContainer" <?=$this->displayBackgroundImage(5)?>></span>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[5]?>')"></span>
 			</a>
 			<a href="/careers/<?=$position[4]?>" class="aboutAvior grayscale">
 				<span class="topPointer show"><?=$position[4]?></span>
-				<span class="imageContainer" <?=$this->displayBackgroundImage(6)?>></span>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[6]?>')"></span>
 			</a>
 			<a href="/careers/office-vacancies" class="aboutAvior grayscale last">
 				<span class="topPointer show">OFFICE VACANCIES</span>
-				<span class="imageContainer" <?=$this->displayBackgroundImage(7)?>></span>
+				<span class="imageContainer" style="background-image: url('<?=$image_path[7]?>')"></span>
 			</a>
 		</div>
 	</div>

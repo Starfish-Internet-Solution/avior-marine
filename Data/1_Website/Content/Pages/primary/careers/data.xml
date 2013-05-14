@@ -1,31 +1,7 @@
 <?xml version="1.0"?>
 <data>
 	<metadata>
-		<page_title_element>Careers</page_title_element>
+		<page_title_element>Get the best Job at Avior Marine</page_title_element>
 		<meta_description>.</meta_description>
 	</metadata>
-	<quick_apply>
-		<image_id>16</image_id>
-	</quick_apply>
-	<online_application>
-		<image_id>16</image_id>
-	</online_application>
-	<office_vacancies>
-		<image_id>16</image_id>
-	</office_vacancies>
-	<position1>
-		<image_id>16</image_id>
-	</position1>
-	<position2>
-		<image_id>16</image_id>
-	</position2>
-	<position3>
-		<image_id>16</image_id>
-	</position3>
-	<position4>
-		<image_id>16</image_id>
-	</position4>
-	<position5>
-		<image_id>16</image_id>
-	</position5>
 </data>

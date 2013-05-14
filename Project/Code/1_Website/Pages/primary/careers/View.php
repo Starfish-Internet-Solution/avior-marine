@@ -4,6 +4,7 @@ require_once(FILE_ACCESS_CORE_CODE.'/Framework/MVC_superClasses_Core/viewSuperCl
 class view extends viewSuperClass_Core 
 {
 	private $array_of_jobs 	= array();
+	private $array_of_images = array();
 	private $jobs;
 	
 	public function _get($field)
