@@ -1,4 +1,3 @@
 $(document).ready(function() {
-	Cufon.replace('h3', { fontFamily: 'Arvil Sans' });
-	Cufon.replace('p,ul', { fontFamily: 'HoeflerTitlingRoman' });
+	Cufon.replace('h2', { fontFamily: 'Arvil Sans' });	
 });

@@ -52,7 +52,7 @@ class mainView extends viewSuperClass_Core
 		response::getInstance()->addContentToStack('css_used_on_every_page',array('MAIN LAYOUT CSS'=>$content));
 		
 		$content = $this->renderTemplate("Project/Design/".DOMAIN."/Main_Layout/templates/global_inpage_javascript.js");
-		response::getInstance()->addContentToStack('inpage_javascript_bottom',array('MAIN INPAGE JAVASCRIPT'=>$content));
+		response::getInstance()->addContentToStack('inpage_javascript_top',array('MAIN INPAGE JAVASCRIPT'=>$content));
         
 		$content = $this->renderTemplate('Project/Design/'.DOMAIN.'/Main_Layout/templates/main.phtml');
 		response::getInstance()->addContentToTree(array('TOPLEVEL'=>$content));

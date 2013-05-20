@@ -2,7 +2,20 @@
 <div id="<?=routes::getInstance()->getCurrentTopLevelPageID();?>_content_wrapper">
 	<div class="bottomSection clearfix">
 		<a id="back" href="/about-us">&lt; Back</a>
-		<h1><?=strtolower(routes::getInstance()->getCurrentSubLevelLinkText())?></h1>
-
+		<h1 class="align_c">Our <?=strtolower(routes::getInstance()->getCurrentSubLevelLinkText())?></h1>
+		<?$data = count($this->_XMLObj->page_content_editor);?>
+		<table id="fleetManned">
+			<tr>
+			<?for($i=0; $i < $data; $i++):?>
+				<?if($i % 4 == 0 && $i != 0):?>
+					</tr><tr>
+				<?endif;?>
+					<td>
+						<?=$this->displayImage($i+1)?>
+						<?=$this->displayElement('page_content_editor',$i)?>
+					</td>
+			<?endfor;?>
+			</tr>
+		</table>
 	</div>
 </div>

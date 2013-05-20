@@ -88,3 +88,23 @@
     }
   }
 }
+
+
+#fleetManned{
+  margin:0 0 50px 40px;
+  tr:first-child img{
+      margin:10px 0 10px !important;
+  }
+  td{
+    float:left;
+    margin-right:20px;
+    width:165px;
+    img{
+      margin:40px 0 10px;
+    }
+    p{
+      font-size:1.2em !important;
+      line-height: 20px !important;
+    }
+  }
+}

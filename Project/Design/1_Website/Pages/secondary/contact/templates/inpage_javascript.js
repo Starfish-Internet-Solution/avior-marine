@@ -4,6 +4,7 @@ $(document).ready(function() {
 	$(".contactForm").submit(function(e) {
 		e.preventDefault();
 		var contactClass = $('.contactForm').attr('class');
+		checkForChanges();
 		
 		if(validateForm()) {
 			$.php('/ajax/contact/submitApplicationAjax', $(this).serialize());
@@ -31,6 +32,16 @@ $(document).ready(function() {
         });
     });
 });
+function checkForChanges(){
+	$('form.contactForm input').each(function(){
+		var placeholder = $(this).attr('placeholder');
+		var value = $(this).val();
+		
+		if(placeholder == value && value != ''){
+			$(this).val('');
+		}
+	});
+}
 function resetForm(contactClass) {
 	$('.'+contactClass).each(function(){
 		this.reset();
@@ -52,9 +63,6 @@ function validateForm() {
 			email:{
 				required:true,
 				email:true
-			},
-			inquiry: {
-				required:true
 			}
 		},
 		messages: {
@@ -70,9 +78,6 @@ function validateForm() {
 			email:{
 				required:'Email address is required',
 				email:'Please enter a valid email address'
-			},
-			inquiry: {
-				required:'Inquiry field is required'
 			}
 		}
 	}).form();

@@ -14,7 +14,7 @@ class model extends modelSuperClass_Core
 		{
 			if(preg_match('/position/i', $file)){
 				$xml_data = simplexml_load_file($this->file_dir.$file.'.xml');
-				$this->array_of_jobs[] = strtolower(preg_replace('/ /', '-', $xml_data->job_title_element));
+				$this->array_of_jobs[] = strtolower($xml_data->job_title_element);
 			}
 		}
 		return $this->array_of_jobs;

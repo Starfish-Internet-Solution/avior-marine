@@ -1,17 +1,17 @@
 $(window).load(function(){
-	Cufon.replace('.HoeflerTitlingRoman,#footer ul li span a, h1.pageHeading', { fontFamily: 'HoeflerTitlingRoman' });
-	Cufon.replace('.ArvilSans,#primary_nav li span a', { fontFamily: 'Arvil Sans' });
-	
-	window.setTimeout(function(){
+
 		stickyFooter();
-	}, 500);
 	
 	$(this).resize(function(){
 		stickyFooter();
 	});	
 	
+});	
+$(document).ready(function(){
+	Cufon.replace('.HoeflerTitlingRoman,#footer ul li span a, h1.pageHeading', { fontFamily: 'HoeflerTitlingRoman' });
+	Cufon.replace('.ArvilSans,#primary_nav li span a', { fontFamily: 'Arvil Sans' });
+	
 });
-
 function stickyFooter()
 {
 	var container = $('#wrapper > div[id*="_container"]');
@@ -21,7 +21,14 @@ function stickyFooter()
 	var footerHeight = 27;
 	var headerHeight = $('header').outerHeight();
 	
-	var containerHeight = contentWrapper.outerHeight() + bannerHeight.outerHeight();
+	var containerHeight = 0;
+	
+	if((bannerHeight.outerHeight()) != undefined){
+		containerHeight = contentWrapper.outerHeight() + bannerHeight.outerHeight();
+	}
+	else{
+		containerHeight = contentWrapper.outerHeight();
+	}
 	
 	var totalPageHeight = footerHeight + headerHeight + containerHeight ;
 	if(totalPageHeight < windowHeight){
