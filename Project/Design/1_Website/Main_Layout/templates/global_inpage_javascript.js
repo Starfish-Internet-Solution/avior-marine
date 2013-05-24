@@ -31,9 +31,16 @@ function stickyFooter()
 	}
 	
 	var totalPageHeight = footerHeight + headerHeight + containerHeight ;
-	if(totalPageHeight < windowHeight){
+//	alert(totalPageHeight);
+//	alert(windowHeight);
+//	if(totalPageHeight < windowHeight){
 		$('footer').css({'position':'relative'});
-		var adjustedContainerHeight = windowHeight - (headerHeight + footerHeight);
+		var adjustedContainerHeight = totalPageHeight - (headerHeight + footerHeight);
 		container.css({'height':adjustedContainerHeight});
-	}
+//	}
+//	else if(totalPageHeight > windowHeight){
+//		$('footer').css({'position':'relative'});
+//		var adjustedContainerHeight = totalPageHeight - (headerHeight + footerHeight);
+//		container.css({'height':adjustedContainerHeight});
+//	}
 }

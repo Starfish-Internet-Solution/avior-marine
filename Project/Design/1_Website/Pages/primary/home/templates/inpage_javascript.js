@@ -2,7 +2,7 @@ $(document).ready(function() {
 	// Rotating Image
 	rotateImage();
 	
-	Cufon.replace('.topSection p em, .topSection p:last-child', { fontFamily: 'HoeflerTitlingRoman' });	
+	Cufon.replace('.topSection p em, .topSection p:last-of-type', { fontFamily: 'HoeflerTitlingRoman' });	
 });
 
 function rotateImage(){
