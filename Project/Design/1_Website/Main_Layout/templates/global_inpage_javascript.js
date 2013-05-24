@@ -8,8 +8,8 @@ $(window).load(function(){
 	
 });	
 $(document).ready(function(){
-	Cufon.replace('.HoeflerTitlingRoman,#footer ul li span a, h1.pageHeading', { fontFamily: 'HoeflerTitlingRoman' });
-	Cufon.replace('.ArvilSans,#primary_nav li span a', { fontFamily: 'Arvil Sans' });
+	Cufon.replace('.HoeflerTitlingRoman, h1.pageHeading', { fontFamily: 'HoeflerTitlingRoman' });
+	Cufon.replace('.ArvilSans', { fontFamily: 'Arvil Sans' });
 	
 });
 function stickyFooter()

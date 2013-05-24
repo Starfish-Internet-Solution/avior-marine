@@ -46,7 +46,8 @@ class mainView extends viewSuperClass_Core
 
        	//GLOBAL SCRIPTS / CSS ========================================================================================================
 		$content = $this->renderTemplate('Project/Design/'.DOMAIN.'/Main_Layout/templates/global_js_links.phtml');
-		response::getInstance()->addContentToTree(array('GLOBAL_SCRIPTS'=>$content));
+		//response::getInstance()->addContentToTree(array('GLOBAL_SCRIPTS'=>$content));
+		response::getInstance()->addContentToStack('javascript_used_on_every_page_top',array('CUFON'=>$content));
 		
 		$content = $this->renderTemplate("Project/Design/".DOMAIN."/Main_Layout/templates/global_css_links.phtml");
 		response::getInstance()->addContentToStack('css_used_on_every_page',array('MAIN LAYOUT CSS'=>$content));

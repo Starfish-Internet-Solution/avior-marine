@@ -1,5 +1,5 @@
 /************************************** MAIN **************************************/
-@import 'C:/WORKSPACE/avior/Project/Design/1_Website/Main_Layout/css/global';
+@import 'C:/WORKSPACE/avior-marine/Project/Design/1_Website/Main_Layout/css/global';
 ul {
   padding:0;
   margin:0;
@@ -91,6 +91,7 @@ h2.innerPageHeading {
 } 
 
 .grayscale {
+  background-color:#333333;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;

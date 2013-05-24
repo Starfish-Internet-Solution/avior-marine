@@ -13,7 +13,7 @@ class controller extends controllerSuperClass_Core
 		$company = $_REQUEST['company'];
 		$telephone = $_REQUEST['telephone'];
 		$email = $_REQUEST['email'];
-		$address = $_REQUEST['address'];
+		//$address = $_REQUEST['address'];
 		$typeInquiry = $_REQUEST['typeInquiry'];
 		$inquiry = $_REQUEST['inquiry'];
 		//info@aviormarine.com

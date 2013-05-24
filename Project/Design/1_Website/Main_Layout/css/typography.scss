@@ -1,6 +1,6 @@
 /************************************** TYPOGRAPHY **************************************/
 
-@import 'C:/WORKSPACE/avior/Project/Design/1_Website/Main_Layout/css/global';
+@import 'C:/WORKSPACE/avior-marine/Project/Design/1_Website/Main_Layout/css/global';
 
 /* =============================================================================
    Typography
@@ -119,4 +119,25 @@ h4 small {  font-size: 0.4em !important;  }
 .fwN  { font-weight:normal; }
 
 
-//** FONT SQUIRREL ***********************************************************************//
+.ffArvil          { font-family: 'ArvilRegular'; }
+.ffhoeflerRoman   { font-family: 'HoeflerTitlingHTFLtRoman'; }
+
+//** FONT FACE ***********************************************************************//
+  
+@font-face {
+    font-family: 'ArvilRegular';
+    src: url('/Project/Design/1_Website/Main_Layout/fonts/arvilsans.eot');
+    src: url('/Project/Design/1_Website/Main_Layout/fonts/arvilsans.eot') format('embedded-opentype'),
+         url('/Project/Design/1_Website/Main_Layout/fonts/arvilsans.woff') format('woff'),
+         url('/Project/Design/1_Website/Main_Layout/fonts/arvilsans.ttf') format('truetype'),
+         url('/Project/Design/1_Website/Main_Layout/fonts/arvilsans.svg#ArvilRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'HoeflerTitlingHTFLtRoman';
+    src: url('/Project/Design/1_Website/Main_Layout/fonts/hoeflertitling-htf-ltroman.eot');
+    src: url('/Project/Design/1_Website/Main_Layout/fonts/hoeflertitling-htf-ltroman.eot') format('embedded-opentype'),
+         url('/Project/Design/1_Website/Main_Layout/fonts/hoeflertitling-htf-ltroman.woff') format('woff'),
+         url('/Project/Design/1_Website/Main_Layout/fonts/hoeflertitling-htf-ltroman.ttf') format('truetype'),
+         url('/Project/Design/1_Website/Main_Layout/fonts/hoeflertitling-htf-ltroman.svg#HoeflerTitlingHTFLtRoman') format('svg');
+}

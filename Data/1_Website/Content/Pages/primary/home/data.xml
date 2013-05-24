@@ -14,4 +14,20 @@
 
 <p>Insert one to two liner about Avior Marine.&nbsp;Insert one to two liner about Avior Marine.&nbsp;Insert one to two liner about Avior Marine.</p>
 ]]></slider_text_editor>
+
+<seafarers>
+	<image_id>0</image_id>
+</seafarers>
+<apply>
+	<image_id>0</image_id>
+</apply>
+<latest_news>
+	<image_id>0</image_id>
+</latest_news>
+<gallery>
+	<image_id>0</image_id>
+</gallery>
+<fleet_manned>
+	<image_id>0</image_id>
+</fleet_manned>
 </data>

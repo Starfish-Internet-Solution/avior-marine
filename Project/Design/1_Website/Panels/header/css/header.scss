@@ -1,5 +1,5 @@
 /************************************** HEADER **************************************/
-@import 'C:/WORKSPACE/avior/Project/Design/1_Website/Main_Layout/css/global';
+@import 'C:/WORKSPACE/avior-marine/Project/Design/1_Website/Main_Layout/css/global';
 
 header{
   background:{
@@ -33,10 +33,13 @@ header{
       margin: 0 15px;
       display:block;
       color:#FFFFFF;
+      letter-spacing:0.5px;
+      font-family: 'ArvilRegular';
     }
-    &.active{
+    &.active,&:hover{
       a{
-        color:#FFFFFF;
+        color:#F68B1F;
+        text-shadow: 1px 1px 1px #000000;
       }
     }
   }
