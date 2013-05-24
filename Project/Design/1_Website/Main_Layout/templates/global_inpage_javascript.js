@@ -31,16 +31,12 @@ function stickyFooter()
 	}
 	
 	var totalPageHeight = footerHeight + headerHeight + containerHeight ;
-//	alert(totalPageHeight);
-//	alert(windowHeight);
-//	if(totalPageHeight < windowHeight){
+	if(totalPageHeight > windowHeight){
 		$('footer').css({'position':'relative'});
 		var adjustedContainerHeight = totalPageHeight - (headerHeight + footerHeight);
-		container.css({'height':adjustedContainerHeight});
-//	}
-//	else if(totalPageHeight > windowHeight){
-//		$('footer').css({'position':'relative'});
-//		var adjustedContainerHeight = totalPageHeight - (headerHeight + footerHeight);
-//		container.css({'height':adjustedContainerHeight});
-//	}
+	}
+	else if(totalPageHeight < windowHeight){
+		var adjustedContainerHeight = windowHeight - (headerHeight + footerHeight);
+	}
+	container.css({'height':adjustedContainerHeight});
 }
