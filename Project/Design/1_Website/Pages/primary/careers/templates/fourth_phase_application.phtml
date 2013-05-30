@@ -1,0 +1,229 @@
+<h4>Service Record</h4>
+<br />
+
+<?php 
+$service = $this->_get('fourth_phase_array');
+$service_count = $this->_get('service_count');
+if(!$service_count)
+	$service_count = 1;
+?>
+
+<form method="post" id="fourth_phase" enctype="multipart/form-data" action="/careers/saveSession">
+	<input type="hidden" name="phase" value="fourth_phase" />
+	<input type="hidden" name="current_phase" value="4" />
+	<input type="hidden" name="service_count" value="<?=$service_count?>" />
+
+
+	<?php for($x = 0; $x < $service_count; $x++):?>
+			<div class="service_container">
+				Name of Ship: <input type="text" name="name_of_ship[]" value="<?=$service['name_of_ship'][$x]?>" />
+				Flag Register: <input type="text" name="flag_register[]" value="<?=$service['flag_register'][$x]?>" />
+				
+				Type of Vessel: <select name="vessel_type[]" > 
+									<option value="Vessel 1" <?=($service['vessel_type'][$x] == 'Vessel 1')? "selected" : ""?>  >Vessel 1</option>
+									<option value="Vessel 2" <?=($service['vessel_type'][$x] == 'Vessel 2')? "selected" : ""?>  >Vessel 2 </option>
+									<option value="Vessel 3" <?=($service['vessel_type'][$x] == 'Vessel 3')? "selected" : ""?>  >Vessel 3 </option>
+								</select>
+				<br />
+				
+				Gross Tonage/Year Built: <input type="text" name="gross_tonage[]" value="<?=$service['flag_register'][$x]?>"  />
+				Engine Type: <input type="text" name="engine_type[]" value="<?=$service['engine_type'][$x]?>"  />
+				BHP / KW :
+				 <select name="bhp[]"> 
+					<option value="Bhp 1"  <?=($service['bhp'][$x] == 'Bhp 1')? "selected" : ""?> >Bhp 1</option>
+					<option value="Bhp 2"  <?=($service['bhp'][$x] == 'Bhp 2')? "selected" : ""?>  >Bhp 2</option>
+					<option value="Bhp 3"   <?=($service['bhp'][$x] == 'Bhp 3')? "selected" : ""?> >Bhp 3</option>
+				</select>
+				<br />
+				
+				Signed On : <br />
+				<select name="signed_on_month[]">
+					<option>-select month-</option>
+					<option value = "January"   <?=($service['signed_on_month'][$x] == 'January')? "selected" : ""?>  >January</option>
+					<option value = "February" <?=($service['signed_on_month'][$x] == 'February')? "selected" : ""?> >February</option>
+					<option value = "March" <?=($service['signed_on_month'][$x] == 'March')? "selected" : ""?>>March</option>
+					<option value = "April" <?=($service['signed_on_month'][$x] == 'April')? "selected" : ""?>>April</option>
+					<option value = "May" <?=($service['signed_on_month'][$x] == 'May')? "selected" : ""?>>May</option>
+					<option value = "June" <?=($service['signed_on_month'][$x] == 'June')? "selected" : ""?>>June</option>
+					<option value = "July" <?=($service['signed_on_month'][$x] == 'July')? "selected" : ""?>>July</option>
+					<option value = "August" <?=($service['signed_on_month'][$x] == 'August')? "selected" : ""?>>August</option>
+					<option value = "September" <?=($service['signed_on_month'][$x] == 'September')? "selected" : ""?>>September</option>
+					<option value = "October" <?=($service['signed_on_month'][$x] == 'October')? "selected" : ""?>>October</option>
+					<option value = "November" <?=($service['signed_on_month'][$x] == 'November')? "selected" : ""?>>November</option>
+					<option value = "December" <?=($service['signed_on_month'][$x] == 'December')? "selected" : ""?>>December</option> 
+				</select>
+			
+				<select name="signed_on_day[]">
+					<option>-select day-</option>
+					<?php for($i = 1; $i < 32; $i++):?>
+						<option value="<?=$i?>" <?=($service['signed_on_day'][$x] == $i)? "selected" : ""?>   ><?=$i?></option>
+					<?endfor?>
+				</select>
+				
+				<select name="signed_on_year[]">
+					<option>-select year-</option>
+					<?php for($i = 1970; $i < 2050; $i++):?>
+						<option value="<?=$i?>"  <?=($service['signed_on_year'][$x] == $i)? "selected" : ""?> ><?=$i?></option>
+					<?endfor?>
+				</select>
+				
+				<br />
+				
+				Signed Of : <br />
+				<select name="signed_of_month[]">
+					<option>-select month-</option>
+					<option value = "January"   <?=($service['signed_of_month'][$x] == 'January')? "selected" : ""?>  >January</option>
+					<option value = "February" <?=($service['signed_of_month'][$x] == 'February')? "selected" : ""?> >February</option>
+					<option value = "March" <?=($service['signed_of_month'][$x] == 'March')? "selected" : ""?>>March</option>
+					<option value = "April" <?=($service['signed_of_month'][$x] == 'April')? "selected" : ""?>>April</option>
+					<option value = "May" <?=($service['signed_of_month'][$x] == 'May')? "selected" : ""?>>May</option>
+					<option value = "June" <?=($service['signed_of_month'][$x] == 'June')? "selected" : ""?>>June</option>
+					<option value = "July" <?=($service['signed_of_month'][$x] == 'July')? "selected" : ""?>>July</option>
+					<option value = "August" <?=($service['signed_of_month'][$x] == 'August')? "selected" : ""?>>August</option>
+					<option value = "September" <?=($service['signed_of_month'][$x] == 'September')? "selected" : ""?>>September</option>
+					<option value = "October" <?=($service['signed_of_month'][$x] == 'October')? "selected" : ""?>>October</option>
+					<option value = "November" <?=($service['signed_of_month'][$x] == 'November')? "selected" : ""?>>November</option>
+					<option value = "December" <?=($service['signed_of_month'][$x] == 'December')? "selected" : ""?>>December</option> 
+				</select>
+				
+				<select name="signed_of_day[]">
+					<option>-select day-</option>
+					<?php for($i = 1; $i < 32; $i++):?>
+						<option value="<?=$i?>" <?=($service['signed_of_day'][$x] == $i)? "selected" : ""?>   ><?=$i?></option>
+					<?endfor?>
+				</select>
+				
+				<select name="signed_of_year[]">
+					<option>-select year-</option>
+					<?php for($i = 1970; $i < 2050; $i++):?>
+						<option value="<?=$i?>" <?=($service['signed_of_year'][$x] == $i)? "selected" : ""?>  ><?=$i?></option>
+					<?endfor?>
+				</select>
+				
+				<br />
+				Principal <input type="text" name="principal[]" value="<?=$service['principal'][$x]?>"  />
+				Manning Agency <input type="text" name="manning_agency[]" value="<?=$service['manning_agency'][$x]?>" />
+				Rank <input type="text" name="rank[]" value="<?=$service['rank'][$x]?>" />
+				<br />
+				<hr />
+			</div>	
+	<?php endfor?>
+
+
+	
+	<br />
+	
+		<div id="clone_container">
+	
+		</div>
+		
+		<br />
+	
+	<span id="add_service"> + Add Service</span>
+	
+	
+	
+	
+	
+	<br />			<br />			<br />
+	<input type="submit" name="action" value="previous" />
+	<input type="submit" name="finish_apply" value="Submit" />
+	
+</form>
+
+
+
+
+<!-- This is use in cloning -->
+	<div class="hide" id="clone">
+		<div>
+			Name of Ship: <input type="text" name="name_of_ship[]" />
+			Flag Register: <input type="text" name="flag_register[]" />
+			Type of Vessel: <select name="vessel_type[]" > 
+								<option value="Vessel 1">Vessel 1</option>
+								<option value="Vessel 2">Vessel 2 </option>
+								<option value="Vessel 2">Vessel 3 </option>
+							</select>
+			<br />
+			Gross Tonage/Year Built: <input type="text" name="gross_tonage[]" />
+			Engine Type: <input type="text" name="engine_type[]" />
+			BHP / KW :
+			 <select name="bhp[]"> 
+				<option value="Bhp 1">Bhp 1</option>
+				<option value="Bhp 2">Bhp 2</option>
+				<option value="Bhp 3">Bhp 3</option>
+			</select>
+			<br />
+			
+			Signed On : <br />
+			<select name="signed_on_month[]">
+				<option>-select month-</option>
+				<option value = "January">January</option>
+				<option value = "February">February</option>
+				<option value = "March">March</option>
+				<option value = "April">April</option>
+				<option value = "May">May</option>
+				<option value = "June">June</option>
+				<option value = "July">July</option>
+				<option value = "August">August</option>
+				<option value = "September">September</option>
+				<option value = "October">October</option>
+				<option value = "November">November</option>
+				<option value = "December">December</option> 
+			</select>
+		
+			<select name="signed_on_day[]">
+				<option>-select day-</option>
+				<?php for($i = 1; $i < 32; $i++):?>
+					<option value="<?=$i?>"><?=$i?></option>
+				<?endfor?>
+			</select>
+			
+			<select name="signed_on_year[]">
+				<option>-select year-</option>
+				<?php for($i = 1970; $i < 2050; $i++):?>
+					<option value="<?=$i?>"><?=$i?></option>
+				<?endfor?>
+			</select>
+			
+			<br />
+			
+			Signed Of : <br />
+			<select name="signed_of_month[]">
+				<option>-select month-</option>
+				<option value = "January">January</option>
+				<option value = "February">February</option>
+				<option value = "March">March</option>
+				<option value = "April">April</option>
+				<option value = "May">May</option>
+				<option value = "June">June</option>
+				<option value = "July">July</option>
+				<option value = "August">August</option>
+				<option value = "September">September</option>
+				<option value = "October">October</option>
+				<option value = "November">November</option>
+				<option value = "December">December</option> 
+			</select>
+			
+			<select name="signed_of_day[]">
+				<option>-select day-</option>
+				<?php for($i = 1; $i < 32; $i++):?>
+					<option value="<?=$i?>"><?=$i?></option>
+				<?endfor?>
+			</select>
+			
+			<select name="signed_of_year[]">
+				<option>-select year-</option>
+				<?php for($i = 1970; $i < 2050; $i++):?>
+					<option value="<?=$i?>"><?=$i?></option>
+				<?endfor?>
+			</select>
+			
+			<br />
+			Principal <input type="text" name="principal[]" />
+			Manning Agency <input type="text" name="manning_agency[]" />
+			Rank <input type="text" name="rank[]" />
+			<br />
+			<hr />
+		</div>
+	</div>

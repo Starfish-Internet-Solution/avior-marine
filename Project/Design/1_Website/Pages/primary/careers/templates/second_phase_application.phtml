@@ -1,0 +1,48 @@
+<h4>Documents and Certificates</h4>
+<br />
+<?php $documents = $this->_get('second_phase_array')?>
+
+<form method="post" enctype="multipart/form-data" action="/careers/saveSession">
+	<input type="hidden" name="phase" value="second_phase" />
+	<input type="hidden" name="current_phase" value="2" />
+
+	Passport Number : <input type="text" name="passport_number" value="<?=$documents['passport_number']?>" />
+	Valid Until : <input type="text" name="passport_validation" value="<?=$documents['passport_validation']?>" />
+	<br />
+	Seamans Number : <input type="text" name="seamans_number" value="<?=$documents['seamans_number']?>" />
+	Valid Until: <input type="text" name="seamans_validation" value="<?=$documents['seamans_validation']?>" />
+	<br />
+	US Visa Type: <input type="text" name="visa" value="<?=$documents['visa']?>" />
+	Valid Until: <input type="text" name="visa_validation" value="<?=$documents['visa_validation']?>" />
+	<br />
+	SRC Rank: <select name="src_rank" > 
+				<option value="src 1" <?=($documents['src_rank'] == 'src 1')? "selected": ""?>>src 1</option>
+				<option value="src 2" <?=($documents['src_rank'] == 'src 2')? "selected": ""?>>src 2</option>
+			</select>
+	Valid Until: <input type="text" name="src_rank_validation" value="<?=$documents['src_rank_validation']?>"  />
+	<br />
+	COC Number: <select name="coc_number">
+					<option value="coc 1" <?=($documents['coc_number'] == 'coc 1')? "selected": ""?> >coc 1</option>
+					<option value="coc 2" <?=($documents['coc_number'] == 'coc 2')? "selected": ""?> >coc 2</option>
+				</select>
+	Level: <input type="text" name="coc_level"  value="<?=$documents['coc_level']?>"/>
+	Valid Until: <input type="text" name="coc_validation" value="<?=$documents['coc_validation']?>" />
+	<br />	
+	Others Seamans Number: <input type="text" name="others_seamans_number" value="<?=$documents['others_seamans_number']?>" />
+	Valid Until: <input type="text" name="others_seamans_validation" value="<?=$documents['others_seamans_validation']?>" />
+	<br />
+	<br /><br />
+	
+	
+	<?php foreach($this->_get('array_of_certificates') as $certificate ):?>
+		<?if(is_array($documents['certificate'])):?>
+				<input type="checkbox" value="<?=$certificate->getCertificateId()?>" name="certificate[]"   <?=(in_array($certificate->getCertificateId(), $documents['certificate']))? "checked" : ""?>   /><?=$certificate->getCertificateName()?> <br/>
+		<?php else:?>
+				<input type="checkbox" value="<?=$certificate->getCertificateId()?>" name="certificate[]" /><?=$certificate->getCertificateName()?> <br/>
+		<?php endif?>
+	<?php endforeach?>
+	
+	<input type="submit" name="action" value="previous" />
+	<input type="submit" name="action" value="next" />
+	
+</form>

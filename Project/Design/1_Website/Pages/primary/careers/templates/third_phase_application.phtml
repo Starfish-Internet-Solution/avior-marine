@@ -1,0 +1,20 @@
+<h4>Skills Experience</h4>
+<br />
+<?php $skills = $this->_get('third_phase_array');?>
+
+
+<form method="post" enctype="multipart/form-data" action="/careers/saveSession">
+	<input type="hidden" name="phase" value="third_phase" />
+	<input type="hidden" name="current_phase" value="3" />
+
+	<?foreach($this->_get('array_of_skills') as $skill):?>
+		<?if(is_array($skills['skills'])):?>
+			<input type="checkbox" name="skills[]" value="<?=$skill->getSkillId()?>" <?=in_array($skill->getSkillId(), $skills['skills'])? "checked" : "" ?> /> <?=$skill->getSkillName()?> <br />
+		<?else:?>
+			<input type="checkbox" name="skills[]" value="<?=$skill->getSkillId()?>" /> <?=$skill->getSkillName()?> <br />
+		<?endif?>
+	<?endforeach?>
+	
+	<input type="submit" name="action" value="previous" />
+	<input type="submit" name="action" value="next" />
+</form>
