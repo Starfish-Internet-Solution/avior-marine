@@ -1,6 +1,12 @@
 Array
 (
-    [0] => Parameters Array - array(0) {
+    [0] => Parameters Array - array(3) {
+  [0]=>
+  string(5) "apply"
+  [1]=>
+  string(5) "phase"
+  [2]=>
+  string(1) "1"
 }
 
 )
