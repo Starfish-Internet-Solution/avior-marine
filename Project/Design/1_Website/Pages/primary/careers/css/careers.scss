@@ -1,5 +1,5 @@
 /** NEWS CSS ******************************************************************/
- @import 'C:/WORKSPACE/avior-marine/Project/Design/1_Website/Main_Layout/css/global';
+ @import 'C:/WORKSPACE2/avior/Project/Design/1_Website/Main_Layout/css/global';
 .topSection {
   margin-bottom:45px;
   width:800px;
@@ -32,13 +32,14 @@
   }
   div {
     .aboutAvior {
-      height: 197px;
-      width:178px;
+      // height: 197px;
+      height:370px;
+      width:193px;
       float:left;
       display:block;
       position:relative;
       cursor:pointer;
-      margin-right:28px;
+      margin-right:9px;
         .topPointer {
           color:#fff;
           font-size:2.1em;
@@ -55,7 +56,7 @@
             repeat:no-repeat;
           }
           width:100%;
-          height:168px;
+          height:340px;
         }
     }
     .last {
@@ -87,4 +88,45 @@
       }
     }
   }
+}
+// ---------------forms------------------
+#quick_apply_from{
+  font-size:14px;
+  padding: 0 8px;
+  background-color:$dirtyWhite;
+  >p{
+    font-size:10px;
+  }
+  input[type="text"],textarea,select{
+    height:24px;
+    width:177px;
+    margin: 4px 0px;
+    font-style:italic;
+    color:$formGray;
+    padding: 3px;
+    border: 1px solid $borderGray;
+    border-radius: 0px;
+  }
+  textarea{
+    height:65px;
+    resize:none;
+  }
+  input[type="submit"]{
+    @include sprite(75px,44px,0px,0px,$hover:'no-hover',$img:$buttonSprites2);
+    border-radius:0px;
+    font-size:0px;
+    margin:0px 103px;
+  }
+}
+// ----------------boxes-------------------
+.applyContent{
+  position:absolute;
+  top:45px;
+  left:8px;
+}
+.applyButton{
+  @include sprite(75px,44px,-75px,0px,$hover:'no-hover',$img:$buttonSprites2);
+  position:absolute;
+  bottom:0;
+  right:8px;
 }

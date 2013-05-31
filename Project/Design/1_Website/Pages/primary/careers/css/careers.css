@@ -1,1 +1,116 @@
-.sprite{border:none;display:inline-block;vertical-align:middle;background-repeat:no-repeat;background-color:transparent}.topSection{margin-bottom:45px;width:800px;margin:0 auto}.topSection h1{font-size:4.4em;margin-bottom:20px}.bottomSection{width:800px;margin:0px auto 50px auto;padding-top:50px}.bottomSection h1{margin-bottom:40px;font-size:3em;color:#004068;text-transform:capitalize}.bottomSection #back{top:-15px;position:relative;margin-bottom:15px;color:#004068;font-family:'arial', verdana , sans-serif;font-size:12px}.bottomSection div .aboutAvior{height:197px;width:178px;float:left;display:block;position:relative;cursor:pointer;margin-right:28px}.bottomSection div .aboutAvior .topPointer{color:#fff;font-size:2.1em;height:29px;width:100%;background-image:url("/Project/Design/1_Website/Pages/primary/about/images/about-us-pointer.png");padding-left:10px}.bottomSection div .aboutAvior .imageContainer{display:inline-block;background-position:center;background-size:cover;background-repeat:no-repeat;width:100%;height:168px}.bottomSection div .last{margin-right:0}.bottomSection div#content{background-color:#ecedee}.bottomSection div#content p{font-size:1.2em !important;color:#404041}.bottomSection div#content p strong{color:#000000 !important;font-size:1.4em !important}.bottomSection div#content ul{padding-left:15px;margin-bottom:15px}.bottomSection div#content ul li{line-height:25px;padding-left:25px;color:#404041;list-style:disc !important;font-size:1.2em}.bottomSection div#content ul ul{margin:0}
+/** NEWS CSS ******************************************************************/
+.sprite, #quick_apply_from input[type="submit"], .applyButton {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-color: transparent; }
+
+.topSection {
+  margin-bottom: 45px;
+  width: 800px;
+  margin: 0 auto; }
+  .topSection h1 {
+    font-size: 4.4em;
+    margin-bottom: 20px; }
+
+.bottomSection {
+  width: 800px;
+  margin: 0px auto 50px auto;
+  padding-top: 50px; }
+  .bottomSection h1 {
+    margin-bottom: 40px;
+    font-size: 3em;
+    color: #004068;
+    text-transform: capitalize; }
+  .bottomSection #back {
+    top: -15px;
+    position: relative;
+    margin-bottom: 15px;
+    color: #004068;
+    font-family: 'arial', verdana , sans-serif;
+    font-size: 12px; }
+  .bottomSection div .aboutAvior {
+    height: 370px;
+    width: 193px;
+    float: left;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    margin-right: 9px; }
+    .bottomSection div .aboutAvior .topPointer {
+      color: #fff;
+      font-size: 2.1em;
+      height: 29px;
+      width: 100%;
+      background-image: url("/Project/Design/1_Website/Pages/primary/about/images/about-us-pointer.png");
+      padding-left: 10px; }
+    .bottomSection div .aboutAvior .imageContainer {
+      display: inline-block;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 340px; }
+  .bottomSection div .last {
+    margin-right: 0; }
+  .bottomSection div#content {
+    background-color: #ecedee; }
+    .bottomSection div#content p {
+      font-size: 1.2em !important;
+      color: #404041; }
+      .bottomSection div#content p strong {
+        color: #000000 !important;
+        font-size: 1.4em!important; }
+    .bottomSection div#content ul {
+      padding-left: 15px;
+      margin-bottom: 15px; }
+      .bottomSection div#content ul li {
+        line-height: 25px;
+        padding-left: 25px;
+        color: #404041;
+        list-style: disc !important;
+        font-size: 1.2em; }
+      .bottomSection div#content ul ul {
+        margin: 0; }
+
+#quick_apply_from {
+  font-size: 14px;
+  padding: 0 8px;
+  background-color: #e9eaea; }
+  #quick_apply_from > p {
+    font-size: 10px; }
+  #quick_apply_from input[type="text"], #quick_apply_from textarea, #quick_apply_from select {
+    height: 24px;
+    width: 177px;
+    margin: 4px 0px;
+    font-style: italic;
+    color: #808285;
+    padding: 3px;
+    border: 1px solid #a6a8ab;
+    border-radius: 0px; }
+  #quick_apply_from textarea {
+    height: 65px;
+    resize: none; }
+  #quick_apply_from input[type="submit"] {
+    width: 75px !important;
+    height: 44px !important;
+    background-position: 0px 0px;
+    background-image: url("/Project/Design/1_Website/Main_Layout/images/sprites/button-sprites2.png");
+    border-radius: 0px;
+    font-size: 0px;
+    margin: 0px 103px; }
+
+.applyContent {
+  position: absolute;
+  top: 45px;
+  left: 8px; }
+
+.applyButton {
+  width: 75px !important;
+  height: 44px !important;
+  background-position: -75px 0px;
+  background-image: url("/Project/Design/1_Website/Main_Layout/images/sprites/button-sprites2.png");
+  position: absolute;
+  bottom: 0;
+  right: 8px; }

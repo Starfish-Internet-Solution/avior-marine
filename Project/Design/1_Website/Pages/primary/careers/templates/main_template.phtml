@@ -5,44 +5,58 @@
 		<?$position = $this->_get('array_of_jobs');?>
 		<?$image_path = $this->_get('array_of_images');?>
 		<div class="clearfix">
-			<a href="/careers/quick-apply" class="aboutAvior grayscale">
-				<span class="topPointer show">QUICK APPLY</span>
-				<span class="imageContainer" style="background-image: url('<?=$image_path[0]?>')">
-				</span>
-			</a>
-			%%QUICK_APPLY%%
-			
-		<!-- <a href="/careers/online-application" class="aboutAvior grayscale">
+				<div class="aboutAvior grayscale">
+					<a href="/careers/quick-apply" class="topPointer show">QUICK APPLY</a>
+					<span class="imageContainer" style="background-image: url('<?=$image_path[0]?>')">
+						%%QUICK_APPLY%%
+					</span>
+				</div>
+				
+			<a href="/careers/online-application" class="aboutAvior grayscale">
 				<span class="topPointer show">ONLINE APPLICATION</span>
 				<span class="imageContainer" style="background-image: url('<?=$image_path[1]?>')"></span>
+				<span class="applyContent"><?=$this->displayElement('page_content_editor')?></span>
+				<span class="applyButton"></span>
 			</a>
 			<a href="/careers/<?=preg_replace('/ /', '-', $position[0])?>" class="aboutAvior grayscale">
 				<span class="topPointer show"><?=$position[0]?></span>
 				<span class="imageContainer" style="background-image: url('<?=$image_path[2]?>')"></span>
+				<span class="applyContent"><?=$this->displayElement('page_content_editor')?></span>
+				<span class="applyButton"></span>
 			</a>
 			<a href="/careers/<?=preg_replace('/ /', '-',$position[1])?>" class="aboutAvior grayscale last">
 				<span class="topPointer show"><?=$position[1]?></span>
 				<span class="imageContainer" style="background-image: url('<?=$image_path[3]?>')"></span>
+				<span class="applyContent"><?=$this->displayElement('page_content_editor')?></span>
+				<span class="applyButton"></span>
 			</a>
 		</div>
 		<div class="clearfix mTxl">
 			<a href="/careers/<?=preg_replace('/ /', '-',$position[2])?>" class="aboutAvior grayscale">
 				<span class="topPointer show"><?=$position[2]?></span>
 				<span class="imageContainer" style="background-image: url('<?=$image_path[4]?>')"></span>
+				<span class="applyContent"><?=$this->displayElement('page_content_editor')?></span>
+				<span class="applyButton"></span>
 			</a>
 			<a href="/careers/<?=preg_replace('/ /', '-',$position[3])?>" class="aboutAvior grayscale">
 				<span class="topPointer show"><?=$position[3]?></span>
 				<span class="imageContainer" style="background-image: url('<?=$image_path[5]?>')"></span>
+				<span class="applyContent"><?=$this->displayElement('page_content_editor')?></span>
+				<span class="applyButton"></span>
 			</a>
 			<a href="/careers/<?=preg_replace('/ /', '-',$position[4])?>" class="aboutAvior grayscale">
+			<span class="applyContent"><?=$this->displayElement('page_content_editor')?></span>
 				<span class="topPointer show"><?=$position[4]?></span>
 				<span class="imageContainer" style="background-image: url('<?=$image_path[6]?>')"></span>
+				<span class="applyButton"></span>
 			</a>
 			<a href="/careers/office-vacancies" class="aboutAvior grayscale last">
 				<span class="topPointer show">OFFICE VACANCIES</span>
 				<span class="imageContainer" style="background-image: url('<?=$image_path[7]?>')"></span>
+				<span class="applyContent"><?=$this->displayElement('page_content_editor')?></span>
+				<span class="applyButton"></span>
+				<?=$this->displayElement('page_content')?>
 			</a>
-		-->	
 		</div>
 	</div>
 </div>

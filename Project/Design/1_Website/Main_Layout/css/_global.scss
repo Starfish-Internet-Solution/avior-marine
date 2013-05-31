@@ -10,7 +10,9 @@ $blue           : #1E2958;
 $darkGray       : #222222;
 $textGray       : #404041;
 $backgroundGray : #ECEDEE;
-
+$dirtyWhite     : #E9EAEA;
+$formGray       : #808285;
+$borderGray     : #A6A8AB;
 //** SPRITES AND BACKGROUNDS SCHEME ***********************************************************************//
   
 // you can add as many sprites as you deem necessary and use this to override the
@@ -20,7 +22,7 @@ $defaultSprite        : '/Project/Design/1_Website/Main_Layout/images/sprites/ma
 $containerBackground  : '/Project/Design/1_Website/Main_Layout/images/backgrounds/container-background.png';
 $contentBackground    : '/Project/Design/1_Website/Main_Layout/images/backgrounds/content-background.png';
 $buttonSprites        : '/Project/Design/1_Website/Main_Layout/images/sprites/button-sprites.png';
-  
+$buttonSprites2       : '/Project/Design/1_Website/Main_Layout/images/sprites/button-sprites2.png';
   
 .sprite {
   border: none;
