@@ -1,48 +1,128 @@
-<h4>Documents and Certificates</h4>
-<br />
-<?php $documents = $this->_get('second_phase_array')?>
+<div class="topInnerBanner">
+	<h1 class="pageHeading">Careers</h1>
+</div>
+<div id="<?=routes::getInstance()->getCurrentTopLevelPageID();?>_content_wrapper" class="clearfix">
+	<div class="fleft clearfix sidePanel">
+	</div>
+	
+	<div class="fleft clearfix formWrap">
+		<a href="/careers" title="back to careers" class="backLink">&lt; Back to Careers</a>
+		<h2 class="ArvilSans mTm">Position Title</h2>
+		<p class="pDescrip">Note: Cells with (*) must be filled in. Type "N/A" if information is not applicable to you.</p>
+			<?php $documents = $this->_get('second_phase_array')?>
+		<div class="clearfix mTl">
+			<p class="pDescrip">Documents and Certificates</p>
+			<p class="pDescrip fright">2/4</p>
+		</div>
+			<form method="post" enctype="multipart/form-data" action="/careers/saveSession">
+				<input type="hidden" name="phase" value="second_phase" />
+				<input type="hidden" name="current_phase" value="2" />
+				
+				<div class="clearfix mVs">
+					<div class="clearfix fleft w300 mRxl">
+						<p><span>Passport Number*</span></p>
+						<input type="text" name="passport_number" class="w300"value="<?=$documents['passport_number']?>" />
+					</div>
+					<div class="clearfix w160 fleft">
+						<p><span>Valid Until</span></p>
+						<input type="text" name="passport_validation" class="w160" value="<?=$documents['passport_validation']?>" />
+					</div>
+				</div>
+				<div class="clearfix mVs">
+					<div class="clearfix fleft w300 mRxl">
+		 				<p><span>Seamanbook Number*</span></p>
+		 				<input type="text" name="seamans_number" class="w300" value="<?=$documents['seamans_number']?>" />
+					</div>
+					<div class="clearfix fleft w160">
+						<p><span>Valid Until</span></p>
+						<input type="text" name="seamans_validation" class="w160" value="<?=$documents['seamans_validation']?>" />
+					</div>
+				</div>
+				<div class="clearfix mVs">
+					<div class="clearfix fleft w300 mRxl">
+						<p><span>US Visa Type</span></p>
+						<input type="text" name="visa" class="w300" value="<?=$documents['visa']?>" />
+					</div>
+					<div class="clearfix fleft w160">
+						<p><span>Valid Until</span></p>
+						<input type="text" name="visa_validation" class="w160" value="<?=$documents['visa_validation']?>" />
+					</div>
+				</div>
+				<div class="clearfix mVs">
+					<div class="clearfix fleft w300 mRxl">
+						<p><span>SRC Rank*</span></p>
+						<select name="src_rank" class="w300" > 
+							<option value="src 1" <?=($documents['src_rank'] == 'src 1')? "selected": ""?>>src 1</option>
+							<option value="src 2" <?=($documents['src_rank'] == 'src 2')? "selected": ""?>>src 2</option>
+						</select>
+					</div>
+					<div class="clearfix fleft w160">
+						<p><span>Valid Until</span></p>
+						<input type="text" name="src_rank_validation" class="w160" value="<?=$documents['src_rank_validation']?>"  />
+					</div>
+				</div>
+				<div class="clearfix mVs">
+					<div class="clearfix fleft w300 mRxl">
+						<p><span>COC Number*</span></p>
+						<select name="coc_number" class="w300">
+							<option value="coc 1" <?=($documents['coc_number'] == 'coc 1')? "selected": ""?> >coc 1</option>
+							<option value="coc 2" <?=($documents['coc_number'] == 'coc 2')? "selected": ""?> >coc 2</option>
+						</select>
+					</div>
+					<div class="clearfix fleft w120 mRl">
+						<p><span>Level</span></p>
+						<select class="w120">
+						</select>
+					</div>
+					<div class="clearfix fleft w120">
+						<p><span>Valid Until</span></p>
+						<input type="text" name="coc_validation" class="w120" value="<?=$documents['coc_validation']?>" />
+					</div>
+				</div>
+				<div class="clearfix mVs">
+					<div class="clearfix fleft w300 mRxl">
+						<p><span>Others Seamans Number</span></p>
+						<input type="text" name="others_seamans_number" class="w300" value="<?=$documents['others_seamans_number']?>" />
+					</div>
+					<div class="clearfix fleft w160">
+						<p><span>Valid Until</span></p>
+						<input type="text" name="others_seamans_validation" value="<?=$documents['others_seamans_validation']?>" />
+					</div>
+				</div>
+				<div class="clearfix mVs" id="checkWrap">
+					<p><span>(tick box if available)</span></p>
+					<div class="clearfix mVm">
+						<?php $counter = 0;?>
+						<div class="clearfix fleft w190">
+						<?php foreach($this->_get('array_of_certificates') as $certificate ):?>
+							
+							<?if($counter % 7 == 0):?>
+								</div>
+								<div class="clearfix fleft w190">
+							<?endif?>
+								<?if(is_array($documents['certificate'])):?>
+										<label><input type="checkbox" value="<?=$certificate->getCertificateId()?>" name="certificate[]" <?=(in_array($certificate->getCertificateId(), $documents['certificate']))? "checked" : ""?>  /><span class="mLs"><?=$certificate->getCertificateName()?></span></label>
+								<?php else:?>
+										<label><input type="checkbox" value="<?=$certificate->getCertificateId()?>" name="certificate[]" /><span class="mLs"><?=$certificate->getCertificateName()?></span></label>
+								<?php endif?>
+							
+							<?php $counter++;?>
+						<?php endforeach?>
+						</div>
+					</div>
+				</div>
+				<div class="posAbs clearfix " id="nextPrev">
+					<input type="submit" name="action" value="previous" />
+					<input type="submit" name="action" value="next" />
+				</div>
+			</form>
+		<p><strong>Part 2/4</strong></p>
+	</div>
+</div>
 
-<form method="post" enctype="multipart/form-data" action="/careers/saveSession">
-	<input type="hidden" name="phase" value="second_phase" />
-	<input type="hidden" name="current_phase" value="2" />
-
-	Passport Number : <input type="text" name="passport_number" value="<?=$documents['passport_number']?>" />
-	Valid Until : <input type="text" name="passport_validation" value="<?=$documents['passport_validation']?>" />
-	<br />
-	Seamans Number : <input type="text" name="seamans_number" value="<?=$documents['seamans_number']?>" />
-	Valid Until: <input type="text" name="seamans_validation" value="<?=$documents['seamans_validation']?>" />
-	<br />
-	US Visa Type: <input type="text" name="visa" value="<?=$documents['visa']?>" />
-	Valid Until: <input type="text" name="visa_validation" value="<?=$documents['visa_validation']?>" />
-	<br />
-	SRC Rank: <select name="src_rank" > 
-				<option value="src 1" <?=($documents['src_rank'] == 'src 1')? "selected": ""?>>src 1</option>
-				<option value="src 2" <?=($documents['src_rank'] == 'src 2')? "selected": ""?>>src 2</option>
-			</select>
-	Valid Until: <input type="text" name="src_rank_validation" value="<?=$documents['src_rank_validation']?>"  />
-	<br />
-	COC Number: <select name="coc_number">
-					<option value="coc 1" <?=($documents['coc_number'] == 'coc 1')? "selected": ""?> >coc 1</option>
-					<option value="coc 2" <?=($documents['coc_number'] == 'coc 2')? "selected": ""?> >coc 2</option>
-				</select>
-	Level: <input type="text" name="coc_level"  value="<?=$documents['coc_level']?>"/>
-	Valid Until: <input type="text" name="coc_validation" value="<?=$documents['coc_validation']?>" />
-	<br />	
-	Others Seamans Number: <input type="text" name="others_seamans_number" value="<?=$documents['others_seamans_number']?>" />
-	Valid Until: <input type="text" name="others_seamans_validation" value="<?=$documents['others_seamans_validation']?>" />
-	<br />
-	<br /><br />
+<!-- 
 	
-	
-	<?php foreach($this->_get('array_of_certificates') as $certificate ):?>
-		<?if(is_array($documents['certificate'])):?>
-				<input type="checkbox" value="<?=$certificate->getCertificateId()?>" name="certificate[]"   <?=(in_array($certificate->getCertificateId(), $documents['certificate']))? "checked" : ""?>   /><?=$certificate->getCertificateName()?> <br/>
-		<?php else:?>
-				<input type="checkbox" value="<?=$certificate->getCertificateId()?>" name="certificate[]" /><?=$certificate->getCertificateName()?> <br/>
-		<?php endif?>
-	<?php endforeach?>
-	
-	<input type="submit" name="action" value="previous" />
-	<input type="submit" name="action" value="next" />
 	
 </form>
+
+ -->

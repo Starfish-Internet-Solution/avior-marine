@@ -1,3 +1,6 @@
+<div class="topInnerBanner">
+	<h1 class="pageHeading">Careers</h1>
+</div>
 <div id="<?=routes::getInstance()->getCurrentTopLevelPageID();?>_content_wrapper" class="pVl">
 	<div class="topSection clearfix align_c">
 	</div>
@@ -6,28 +9,28 @@
 		<?$image_path = $this->_get('array_of_images');?>
 		<div class="clearfix">
 				<div class="aboutAvior grayscale">
-					<a href="/careers/quick-apply" class="topPointer show">QUICK APPLY</a>
+					<a href="/careers" class="topPointer show">QUICK APPLY</a>
 					<span class="imageContainer" style="background-image: url('<?=$image_path[0]?>')">
 						%%QUICK_APPLY%%
 					</span>
 				</div>
 				
-			<a href="/careers/online-application" class="aboutAvior grayscale">
+			<a href="/careers/apply/phase/1" class="aboutAvior grayscale">
 				<span class="topPointer show">ONLINE APPLICATION</span>
 				<span class="imageContainer" style="background-image: url('<?=$image_path[1]?>')"></span>
-				<span class="applyContent"><?=$this->displayElement('page_content_editor')?></span>
+				<span class="applyContent"><?=$this->displayElement('page_content_editor_onlineapplication')?></span>
 				<span class="applyButton"></span>
 			</a>
 			<a href="/careers/<?=preg_replace('/ /', '-', $position[0])?>" class="aboutAvior grayscale">
 				<span class="topPointer show"><?=$position[0]?></span>
 				<span class="imageContainer" style="background-image: url('<?=$image_path[2]?>')"></span>
-				<span class="applyContent"><?=$this->displayElement('page_content_editor')?></span>
+				<span class="applyContent"><?=$this->displayElement('page_content_editor_1')?></span>
 				<span class="applyButton"></span>
 			</a>
 			<a href="/careers/<?=preg_replace('/ /', '-',$position[1])?>" class="aboutAvior grayscale last">
 				<span class="topPointer show"><?=$position[1]?></span>
 				<span class="imageContainer" style="background-image: url('<?=$image_path[3]?>')"></span>
-				<span class="applyContent"><?=$this->displayElement('page_content_editor')?></span>
+				<span class="applyContent"><?=$this->displayElement('page_content_editor_2')?></span>
 				<span class="applyButton"></span>
 			</a>
 		</div>
@@ -35,17 +38,17 @@
 			<a href="/careers/<?=preg_replace('/ /', '-',$position[2])?>" class="aboutAvior grayscale">
 				<span class="topPointer show"><?=$position[2]?></span>
 				<span class="imageContainer" style="background-image: url('<?=$image_path[4]?>')"></span>
-				<span class="applyContent"><?=$this->displayElement('page_content_editor')?></span>
+				<span class="applyContent"><?=$this->displayElement('page_content_editor_3')?></span>
 				<span class="applyButton"></span>
 			</a>
 			<a href="/careers/<?=preg_replace('/ /', '-',$position[3])?>" class="aboutAvior grayscale">
 				<span class="topPointer show"><?=$position[3]?></span>
 				<span class="imageContainer" style="background-image: url('<?=$image_path[5]?>')"></span>
-				<span class="applyContent"><?=$this->displayElement('page_content_editor')?></span>
+				<span class="applyContent"><?=$this->displayElement('page_content_editor_4')?></span>
 				<span class="applyButton"></span>
 			</a>
 			<a href="/careers/<?=preg_replace('/ /', '-',$position[4])?>" class="aboutAvior grayscale">
-			<span class="applyContent"><?=$this->displayElement('page_content_editor')?></span>
+			<span class="applyContent"><?=$this->displayElement('page_content_editor_5')?></span>
 				<span class="topPointer show"><?=$position[4]?></span>
 				<span class="imageContainer" style="background-image: url('<?=$image_path[6]?>')"></span>
 				<span class="applyButton"></span>
@@ -53,9 +56,8 @@
 			<a href="/careers/office-vacancies" class="aboutAvior grayscale last">
 				<span class="topPointer show">OFFICE VACANCIES</span>
 				<span class="imageContainer" style="background-image: url('<?=$image_path[7]?>')"></span>
-				<span class="applyContent"><?=$this->displayElement('page_content_editor')?></span>
+				<span class="applyContent"><?=$this->displayElement('page_content_editor_6')?></span>
 				<span class="applyButton"></span>
-				<?=$this->displayElement('page_content')?>
 			</a>
 		</div>
 	</div>

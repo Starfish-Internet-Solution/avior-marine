@@ -1,11 +1,15 @@
 <form method="post" id="quick_apply_from" action="">
 	<p>This option is for senior officers only.</p>
 	<input type="text" name="full_name" placeholder="Full Name*"/> <br />
-	<select name="rank"><option value="">Select Position</option></select><br />
-	<select name="date_of_birth"><option value="">Date of Birth</option></select><br />
+		<select name="rank" id="selectbox">
+			<option value="">Select Position</option>
+		</select>
+		<select name="date_of_birth"  class="selectBox">
+			<option value="">Date of Birth</option>
+		</select>
 	<input type="text" name="phone" placeholder="Phone"/> <br />
 	<input type="text" name="email" placeholder="Email" /> <br />
-	<select name="vessel_type" ><option value="">Vessel Type</option></select><br />
+	<select name="vessel_type" ><option value="">Vessel Type</option></select>
 	<textarea name="comment" placeholder="Comment"></textarea> <br />
 	<input type="submit" name="mail" value="submit"  />
 </form>

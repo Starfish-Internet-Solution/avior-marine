@@ -1,5 +1,5 @@
 /** NEWS CSS ******************************************************************/
-.sprite, #quick_apply_from input[type="submit"], .applyButton {
+.sprite, #quick_apply_from input[type="submit"], .applyButton, .formWrap form .attachResume .dummyFile, .formWrap form input[value="previous"], .formWrap form input[value="next"] {
   border: none;
   display: inline-block;
   vertical-align: middle;
@@ -43,7 +43,7 @@
       font-size: 2.1em;
       height: 29px;
       width: 100%;
-      background-image: url("/Project/Design/1_Website/Pages/primary/about/images/about-us-pointer.png");
+      background-image: url("/Project/Design/1_Website/Pages/primary/about/images/about-us-pointer2.png");
       padding-left: 10px; }
     .bottomSection div .aboutAvior .imageContainer {
       display: inline-block;
@@ -79,7 +79,7 @@
   padding: 0 8px;
   background-color: #e9eaea; }
   #quick_apply_from > p {
-    font-size: 10px; }
+    font-size: 1.0em; }
   #quick_apply_from input[type="text"], #quick_apply_from textarea, #quick_apply_from select {
     height: 24px;
     width: 177px;
@@ -94,12 +94,12 @@
     resize: none; }
   #quick_apply_from input[type="submit"] {
     width: 75px !important;
-    height: 44px !important;
+    height: 25px !important;
     background-position: 0px 0px;
     background-image: url("/Project/Design/1_Website/Main_Layout/images/sprites/button-sprites2.png");
     border-radius: 0px;
     font-size: 0px;
-    margin: 0px 103px; }
+    margin: 12px 103px; }
 
 .applyContent {
   position: absolute;
@@ -108,9 +108,119 @@
 
 .applyButton {
   width: 75px !important;
-  height: 44px !important;
+  height: 25px !important;
   background-position: -75px 0px;
   background-image: url("/Project/Design/1_Website/Main_Layout/images/sprites/button-sprites2.png");
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   right: 8px; }
+
+.sidePanel {
+  width: 220px;
+  min-height: 300px;
+  background-color: #e7e8e9; }
+
+.formWrap {
+  width: 690px;
+  padding: 23px; }
+  .formWrap .backLink {
+    font-size: 1.4em;
+    color: #004068; }
+  .formWrap .pDescrip, .formWrap label {
+    color: #939597;
+    font-size: 1.2em;
+    display: inline; }
+  .formWrap > div {
+    background-color: #e7e8e9;
+    padding: 5px;
+    border: 1px solid #d1d2d4; }
+    .formWrap > div p {
+      color: #000;
+      font-size: 1.4em;
+      font-weight: bold;
+      display: inline; }
+  .formWrap .w215 {
+    width: 215px; }
+  .formWrap .w280 {
+    width: 280px; }
+  .formWrap .w120 {
+    width: 120px; }
+  .formWrap .w235 {
+    width: 235px; }
+  .formWrap .w565 {
+    width: 565px; }
+  .formWrap .w290 {
+    width: 290px; }
+  .formWrap .w190 {
+    width: 190px; }
+  .formWrap .w220 {
+    width: 220px; }
+  .formWrap .w365 {
+    width: 365px; }
+  .formWrap .w300 {
+    width: 300px; }
+  .formWrap .w160 {
+    width: 160px; }
+  .formWrap .w250 {
+    width: 250px; }
+  .formWrap .w350 {
+    width: 350px; }
+  .formWrap form {
+    border: 1px solid #d1d2d4;
+    padding: 20px; }
+    .formWrap form input[type="text"], .formWrap form select, .formWrap form textarea {
+      font-size: 1.2em;
+      padding: 3px; }
+    .formWrap form .attachResume {
+      width: 350px;
+      height: 70px;
+      border: 1px solid #d1d2d4;
+      background-color: #f3f3f4;
+      padding: 17px; }
+      .formWrap form .attachResume .dummyFile {
+        width: 172px !important;
+        height: 36px !important;
+        background-position: -151px 0px;
+        background-image: url("/Project/Design/1_Website/Main_Layout/images/sprites/button-sprites2.png"); }
+      .formWrap form .attachResume input[type="file"] {
+        opacity: 0; }
+    .formWrap form #optional {
+      margin-left: 295px; }
+    .formWrap form p span {
+      font-weight: bold; }
+    .formWrap form input[type="text"], .formWrap form select {
+      height: 25px;
+      border-radius: 0px;
+      border: 1px solid #d1d2d4; }
+    .formWrap form label {
+      display: block; }
+    .formWrap form #checkWrap label {
+      color: #000; }
+    .formWrap form select[name="month"], .formWrap form select[name="available_month"] {
+      width: 120px; }
+    .formWrap form select[name="day"], .formWrap form select[name="available_date"] {
+      width: 82px; }
+    .formWrap form select[name="year"], .formWrap form select[name="available_year"] {
+      width: 94px; }
+    .formWrap form .outfit {
+      width: auto;
+      height: auto; }
+    .formWrap form textarea {
+      resize: none;
+      width: 602px;
+      height: 133px; }
+    .formWrap form input[value="previous"] {
+      font-size: 0;
+      width: 122px !important;
+      height: 36px !important;
+      background-position: -415px 0px;
+      background-image: url("/Project/Design/1_Website/Main_Layout/images/sprites/button-sprites2.png"); }
+    .formWrap form input[value="next"] {
+      font-size: 0;
+      width: 91px !important;
+      height: 36px !important;
+      background-position: -323px 0px;
+      background-image: url("/Project/Design/1_Website/Main_Layout/images/sprites/button-sprites2.png"); }
+    .formWrap form #nextPrev {
+      right: 30px;
+      bottom: 12px; }

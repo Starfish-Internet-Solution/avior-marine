@@ -5,4 +5,29 @@ Array
   string(12) "pages_editor"
 }
 
+    [1] => <span style="color: green">$string - <pre>string(32) "Get the best Job at Avior Marine"
+<pre></span>
+    [2] => <span style="color: green">$string - <pre>string(1) "."
+<pre></span>
+    [3] => <span style="color: green">$string - <pre>string(27) "<p>online application</p>
+"
+<pre></span>
+    [4] => <span style="color: green">$string - <pre>string(16) "<p>janitor</p>
+"
+<pre></span>
+    [5] => <span style="color: green">$string - <pre>string(16) "<p>swipper</p>
+"
+<pre></span>
+    [6] => <span style="color: green">$string - <pre>string(16) "<p>builder</p>
+"
+<pre></span>
+    [7] => <span style="color: green">$string - <pre>string(16) "<p>painter</p>
+"
+<pre></span>
+    [8] => <span style="color: green">$string - <pre>string(20) "<p>xerox ading</p>
+"
+<pre></span>
+    [9] => <span style="color: green">$string - <pre>string(25) "<p>office vacancies</p>
+"
+<pre></span>
 )

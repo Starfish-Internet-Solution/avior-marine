@@ -1,129 +1,228 @@
-<h4>Personal Information</h4>
-<br />
-
-<?php $personal_info = $this->_get('first_phase_array');?>
-
-<form method="post" enctype="multipart/form-data" action="/careers/saveSession">
-	<input type="hidden" name="phase" value="first_phase" />
-	<input type="hidden" name="current_phase" value="1" />
-
-	<input type="file" name="resume" /> <br />
-	
-	First Name<input type="text" name="first_name" value="<?=$personal_info['first_name']?>" />
-	Last Name<input type="text" name="last_name"  value="<?=$personal_info['last_name']?>" />
-	Middle Name<input type="text" name="middle_name" value="<?=$personal_info['middle_name']?>"/>
-	<br />
-	
-	<select name="month">
-		<option>-select month-</option>
-		<option value = "January"  <?=($personal_info['month'] == 'January')? "selected" : ""?>>January</option>
-		<option value = "February" <?=($personal_info['month'] == 'February')? "selected" : ""?>>February</option>
-		<option value = "March" <?=($personal_info['month'] == 'March')? "selected" : ""?>>March</option>
-		<option value = "April" <?=($personal_info['month'] == 'April')? "selected" : ""?>>April</option>
-		<option value = "May" <?=($personal_info['month'] == 'May')? "selected" : ""?>>May</option>
-		<option value = "June" <?=($personal_info['month'] == 'June')? "selected" : ""?>>June</option>
-		<option value = "July" <?=($personal_info['month'] == 'July')? "selected" : ""?>>July</option>
-		<option value = "August" <?=($personal_info['month'] == 'August')? "selected" : ""?>>August</option>
-		<option value = "September" <?=($personal_info['month'] == 'September')? "selected" : ""?>>September</option>
-		<option value = "October" <?=($personal_info['month'] == 'October')? "selected" : ""?>>October</option>
-		<option value = "November" <?=($personal_info['month'] == 'November')? "selected" : ""?>>November</option>
-		<option value = "December" <?=($personal_info['month'] == 'December')? "selected" : ""?>>December</option> 
-	</select>
-	
-	<select name="day">
-		<option>-select day-</option>
-		<?php for($i = 1; $i < 32; $i++):?>
-			<option value="<?=$i?>" <?=($personal_info['day'] == $i)? "selected" : ""?>><?=$i?></option>
-		<?endfor?>
-	</select>
-	
-	<select name="year">
-		<option>-select year-</option>
-		<?php for($i = 1950; $i < 2021; $i++):?>
-			<option value="<?=$i?>" <?=($personal_info['year'] == $i)? "selected" : ""?>><?=$i?></option>
-		<?endfor?>
-	</select>
-	
-	
-	Place of Birth:<input type="text" name="place_of_birth" value="<?=$personal_info['place_of_birth']?>" />
-	<br />
-	Nationality:<input type="text" name="nationality" value="<?=$personal_info['nationality']?>" />
-	<br />
-	Civil Status:<input type="text" name="civil_status" value="<?=$personal_info['civil_status']?>" />
-	<br />
-	Height:<input type="text" name="height" value="<?=$personal_info['height']?>"/>
-	Weight:<input type="text" name="weight" value="<?=$personal_info['weight']?>"/>		
-	<br />
-	Landline Number:<input type="text" name="landline_number" value="<?=$personal_info['landline_number']?>" />
-	Phone Number:<input type="text" name="mobile_number" value="<?=$personal_info['mobile_number']?>"/>
-	email<input type="text" name="email" value="<?=$personal_info['email']?>"/>
-	<br />	
-	Address(Metro Manila) : <input type="text" name="address_manila" value="<?=$personal_info['address_manila']?>"/>
-	<br />
-	Address(Province): <input type="text" name="address_province" value="<?=$personal_info['address_province']?>"/>
-	<br />
-	Graduated From School/ Collge: <input type="text" name="college" value="<?=$personal_info['college']?>"/>
-	Degree/Course : <input type="text" name="degree" value="<?=$personal_info['degree']?>"/>
-	Year Graduated : <input type="text" name="year_graduated" value="<?=$personal_info['year_graduated']?>"/>
-	<br />
-	TIN Number : <input type="text" name="tin_number" value="<?=$personal_info['tin_number']?>"/>
-	SSS Number : <input type="text" name="sss_number" value="<?=$personal_info['sss_number']?>"/>
-	PhilHealth Number : <input type="text" name="philhealth_number" value="<?=$personal_info['philhealth_number']?>"/>
-	<br />
-	Outfit Size
-	<br />
-	Uniform <input type="text" name="uniform" value="<?=$personal_info['uniform']?>"/>	
-	Waist <input type="text" name="waist" value="<?=$personal_info['waist']?>"/>
-	Shoes <input type="text" name="shoes" value="<?=$personal_info['shoes']?>"/>
-	<br />
-	Rank Applied <select name="rank_applied">
-					<option value="rank 1"  <?=($personal_info['rank_applied'] == 'rank 1')? "selected" : ""?> >rank 1</option>
-					<option value="rank 2" <?=($personal_info['rank_applied'] == 'rank 2')? "selected" : ""?> >rank 2</option>
+<div class="topInnerBanner">
+	<h1 class="pageHeading">Careers</h1>
+</div>
+<div id="<?=routes::getInstance()->getCurrentTopLevelPageID();?>_content_wrapper" class="clearfix">
+	<div class="fleft clearfix sidePanel">
+	</div>
+	<div class="fleft clearfix formWrap">
+		<h2 class="ArvilSans">Personal Information</h2>
+		<p class="pDescrip">Note: Cells with (*) must be filled in. Type "N/A" if information is not applicable to you.</p>
+		<?php $personal_info = $this->_get('first_phase_array');?>
+		<div class="clearfix mTl">
+			<p class="pDescrip">Personal Information</p>
+			<p class="pDescrip fright">1/4</p>
+		</div>
+		<form method="post" enctype="multipart/form-data" action="/careers/saveSession" class="clearfix">
+			<input type="hidden" name="phase" value="first_phase" />
+			<input type="hidden" name="current_phase" value="1" />
+			<div class="clearfix attachResume">
+				<div class="dummyFile">
+					<input type="file" name="resume" />
+				</div>
+			</div>
+			<p class="pDescrip" id="optional">(Optional)</p>
+			<div class="clearfix mVs">
+				<p><span>Name*</span></p>
+				<div class="w250 fleft clearfix">
+					<input type="text" name="first_name" class="w215" value="<?=$personal_info['first_name']?>" />
+					<label>First</label>
+					<input type="text" name="last_name" class="w215" value="<?=$personal_info['last_name']?>" />
+					<label>Surname</label>
+				</div>
+				<div class="w350 fright clearfix">
+					<input type="text" name="middle_name" class="w215" value="<?=$personal_info['middle_name']?>"/>
+					<label>Middle</label>
+				</div>
+			</div>
+			
+			<div class="clearfix mVs">
+				<p><span>Date of Birth*</span></p>
+				<select name="month" class="mRxl">
+					<option>-select month-</option>
+					<option value = "January"  <?=($personal_info['month'] == 'January')? "selected" : ""?>>January</option>
+					<option value = "February" <?=($personal_info['month'] == 'February')? "selected" : ""?>>February</option>
+					<option value = "March" <?=($personal_info['month'] == 'March')? "selected" : ""?>>March</option>
+					<option value = "April" <?=($personal_info['month'] == 'April')? "selected" : ""?>>April</option>
+					<option value = "May" <?=($personal_info['month'] == 'May')? "selected" : ""?>>May</option>
+					<option value = "June" <?=($personal_info['month'] == 'June')? "selected" : ""?>>June</option>
+					<option value = "July" <?=($personal_info['month'] == 'July')? "selected" : ""?>>July</option>
+					<option value = "August" <?=($personal_info['month'] == 'August')? "selected" : ""?>>August</option>
+					<option value = "September" <?=($personal_info['month'] == 'September')? "selected" : ""?>>September</option>
+					<option value = "October" <?=($personal_info['month'] == 'October')? "selected" : ""?>>October</option>
+					<option value = "November" <?=($personal_info['month'] == 'November')? "selected" : ""?>>November</option>
+					<option value = "December" <?=($personal_info['month'] == 'December')? "selected" : ""?>>December</option> 
 				</select>
-	
-	Rank Applied <select name="vessel_type">
-				<option value="vessel_type 1"  <?=($personal_info['vessel_type'] == 'vessel_type 1')? "selected" : ""?> >vessel_type 1</option>
-				<option value="vessel_type 2" <?=($personal_info['vessel_type'] == 'vessel_type 2')? "selected" : ""?>>vessel_type 2</option>
-			</select>
-	<br />
-	Available Date:
-	<select name="available_month">
-		<option>-select month-</option>
-		<option value = "January"  <?=($personal_info['available_month'] == 'January')? "selected" : ""?>>January</option>
-		<option value = "February" <?=($personal_info['available_month'] == 'February')? "selected" : ""?>>February</option>
-		<option value = "March" <?=($personal_info['available_month'] == 'March')? "selected" : ""?>>March</option>
-		<option value = "April" <?=($personal_info['available_month'] == 'April')? "selected" : ""?>>April</option>
-		<option value = "May" <?=($personal_info['available_month'] == 'May')? "selected" : ""?>>May</option>
-		<option value = "June" <?=($personal_info['available_month'] == 'June')? "selected" : ""?>>June</option>
-		<option value = "July" <?=($personal_info['available_month'] == 'July')? "selected" : ""?>>July</option>
-		<option value = "August" <?=($personal_info['available_month'] == 'August')? "selected" : ""?>>August</option>
-		<option value = "September" <?=($personal_info['available_month'] == 'September')? "selected" : ""?>>September</option>
-		<option value = "October" <?=($personal_info['available_month'] == 'October')? "selected" : ""?>>October</option>
-		<option value = "November" <?=($personal_info['available_month'] == 'November')? "selected" : ""?>>November</option>
-		<option value = "December" <?=($personal_info['available_month'] == 'December')? "selected" : ""?>>December</option> 
-	</select>
-	
-	<select name="available_date">
-		<option>-select day-</option>
-		<?php for($i = 1; $i < 32; $i++):?>
-			<option value="<?=$i?>" <?=($personal_info['available_date'] == $i)? "selected" : ""?>><?=$i?></option>
-		<?endfor?>
-	</select>
-	
-	<select name="available_year">
-		<option>-select year-</option>
-		<?php for($i = 2013; $i < 2050; $i++):?>
-			<option value="<?=$i?>" <?=($personal_info['available_year'] == $i)? "selected" : ""?> ><?=$i?></option>
-		<?endfor?>
-	</select>
-
-	Expected Salary <input type="text" name="expected_salary"	value="<?=$personal_info['expected_salary']?>" />
-	<br />
-	Comments <textarea name="comments" ><?=$personal_info['comments']?></textarea>
-	
-	<br />	
-	<br />	
-	<br />	
-	
-	<input type="submit" name="action" value="next" />
-</form>
+				<select name="day" class="mRxl">
+					<option>-select day-</option>
+					<?php for($i = 1; $i < 32; $i++):?>
+						<option value="<?=$i?>" <?=($personal_info['day'] == $i)? "selected" : ""?>><?=$i?></option>
+					<?endfor?>
+				</select>
+				<select name="year">
+					<option>-select year-</option>
+					<?php for($i = 1950; $i < 2021; $i++):?>
+						<option value="<?=$i?>" <?=($personal_info['year'] == $i)? "selected" : ""?>><?=$i?></option>
+					<?endfor?>
+				</select>
+			</div>
+			
+			<div class="clearfix mVs">
+				<div class="clearfix  w290 fleft">
+					<p><span>Place of Birth*</span></p>
+					<input type="text" name="place_of_birth"class="w280" value="<?=$personal_info['place_of_birth']?>" />
+				</div>
+				<div class="clearfix w120 fleft mRs">
+					<p><span>Height (ft)</span></p>
+					<input type="text" name="height" class="w120" value="<?=$personal_info['height']?>"/>
+				</div>
+				<div class="clearfix w120 fleft">
+					<p><span>Weight (kg)</span></p>
+					<input type="text" name="weight" class="w120" value="<?=$personal_info['weight']?>"/>		
+				</div>
+			</div>
+			
+			<div class="celarfix mVs">
+				<div class="fleft clearfix w280">
+					<p><span>Nationality</span></p>
+					<input type="text" name="nationality" class="w215" value="<?=$personal_info['nationality']?>" />
+				</div>
+				<div class="clearfix">
+					<p><span>Civil Status</span></p>
+					<input type="text" name="civil_status" class="w215" value="<?=$personal_info['civil_status']?>" />
+				</div>
+				<div class="fleft clearfix w280">
+					<p><span>Landline Number</span></p>
+					<input type="text" name="landline_number"class="w235" value="<?=$personal_info['landline_number']?>" />
+				</div>
+				<div class="clearfix">
+					<p><span>Mobile Number</span></p>
+					<input type="text" name="mobile_number" class="w235" value="<?=$personal_info['mobile_number']?>"/>
+				</div>
+			</div>
+			
+			<div class="clearfix mVs">
+				<p><span>Email Address</span></p>
+				<input type="text" name="email" class="w235" placeholder="email@email.com" value="<?=$personal_info['email']?>"/>
+			</div>
+			
+			<div class="clearfix mVs">
+				<p><span>Address(Metro Manila)</span></p>
+				<input type="text" name="address_manila" class="w565" value="<?=$personal_info['address_manila']?>"/>
+				<p><span>Address(Province)</span></p>
+				<input type="text" name="address_province" class="w565" value="<?=$personal_info['address_province']?>"/>
+			</div>
+			
+			<div class="clearfix mVs">
+				<div class="clearfix">
+					<p><span>Graduated From School/College</span></p>
+					<input type="text" name="college" class="w565" value="<?=$personal_info['college']?>"/>
+				</div>
+				<div class="clearfix fleft mRxl">
+					<p><span>Degree/Course</span></p>
+					<input type="text" name="degree" class="w220" value="<?=$personal_info['degree']?>"/>
+				</div>
+				<div class="clearfix">
+					<p><span>Year Graduated</span></p>
+					<input type="text" name="year_graduated" class="w120" value="<?=$personal_info['year_graduated']?>"/>
+				</div>
+			</div>
+			
+			<div class="clearfix mVs ">
+				<div class="clearfix fleft w190 mRs">
+					<p><span>TIN Number</span></p>
+					<input type="text" name="tin_number" class="w190" value="<?=$personal_info['tin_number']?>"/>
+				</div>
+				<div class="clearfix fleft w190 mRs">
+					<p><span>SSS Number</span></p>
+					<input type="text" name="sss_number" class="w190" value="<?=$personal_info['sss_number']?>"/>
+				</div>
+				<div class="clearfix fleft w190">
+					<p><span>PhilHealth Number</span></p>
+					<input type="text" name="philhealth_number" class="w190" value="<?=$personal_info['philhealth_number']?>"/>
+				</div>
+			</div>
+			
+			<div class="attachResume mVs outfit clearfix">
+				<p><span>Outfit Size</span></p>
+				<div class="clearfix w120 fleft mRxxl">
+					<p><span>Uniform</span></p>
+					<select name="uniform" class="w120"></select>
+				</div>
+				<div class="clearfix w120 fleft mRxxl mLxxl">
+					<p><span>Waist</span></p>
+					<select name="waist" class="w120"></select>
+				</div>
+				<div class="clearfix w120 fleft mLxxl">
+					<p><span>Shoes</span></p>
+					<select name="shoes" class="w120"></select>
+				</div>
+			</div>
+			
+			<div class="clearfix mVs">
+				<div class="clearfix w215 fleft mRl">
+					<p><span>Rank Applied*</span></p>
+					<select name="rank_applied">
+						<option value="rank 1"  <?=($personal_info['rank_applied'] == 'rank 1')? "selected" : ""?> >rank 1</option>
+						<option value="rank 2" <?=($personal_info['rank_applied'] == 'rank 2')? "selected" : ""?> >rank 2</option>
+					</select>
+				</div>
+				<div class="clearfix">
+					<p><span>Preffered Vessel Type*</span></p>
+					<select name="vessel_type">
+						<option value="vessel_type 1"  <?=($personal_info['vessel_type'] == 'vessel_type 1')? "selected" : ""?> >vessel_type 1</option>
+						<option value="vessel_type 2" <?=($personal_info['vessel_type'] == 'vessel_type 2')? "selected" : ""?>>vessel_type 2</option>
+					</select>
+					
+				</div>
+			</div>
+			
+			<div class="clearfix mVs">
+				<div class="clearfix fleft w365 mRl">
+					<p><span>Available Date</span></p>
+					<select name="available_month"  class="mRxl">
+						<option>-select month-</option>
+						<option value = "January"  <?=($personal_info['available_month'] == 'January')? "selected" : ""?>>January</option>
+						<option value = "February" <?=($personal_info['available_month'] == 'February')? "selected" : ""?>>February</option>
+						<option value = "March" <?=($personal_info['available_month'] == 'March')? "selected" : ""?>>March</option>
+						<option value = "April" <?=($personal_info['available_month'] == 'April')? "selected" : ""?>>April</option>
+						<option value = "May" <?=($personal_info['available_month'] == 'May')? "selected" : ""?>>May</option>
+						<option value = "June" <?=($personal_info['available_month'] == 'June')? "selected" : ""?>>June</option>
+						<option value = "July" <?=($personal_info['available_month'] == 'July')? "selected" : ""?>>July</option>
+						<option value = "August" <?=($personal_info['available_month'] == 'August')? "selected" : ""?>>August</option>
+						<option value = "September" <?=($personal_info['available_month'] == 'September')? "selected" : ""?>>September</option>
+						<option value = "October" <?=($personal_info['available_month'] == 'October')? "selected" : ""?>>October</option>
+						<option value = "November" <?=($personal_info['available_month'] == 'November')? "selected" : ""?>>November</option>
+						<option value = "December" <?=($personal_info['available_month'] == 'December')? "selected" : ""?>>December</option> 
+					</select>
+					
+					<select name="available_date"  class="mRxl">
+						<option>-select day-</option>
+						<?php for($i = 1; $i < 32; $i++):?>
+							<option value="<?=$i?>" <?=($personal_info['available_date'] == $i)? "selected" : ""?>><?=$i?></option>
+						<?endfor?>
+					</select>
+					
+					<select name="available_year">
+						<option>-select year-</option>
+						<?php for($i = 2013; $i < 2050; $i++):?>
+							<option value="<?=$i?>" <?=($personal_info['available_year'] == $i)? "selected" : ""?> ><?=$i?></option>
+						<?endfor?>
+					</select>
+				</div>
+				<div class="clearfix">
+					<p><span>Expected Salary (USD)</span></p>
+					<input type="text" name="expected_salary"	class="w190" value="<?=$personal_info['expected_salary']?>" />
+				</div>
+			</div>
+			
+			<div class="clearfix mVs">
+				<p><span>Comments</span></p>
+				<textarea name="comments" ><?=$personal_info['comments']?></textarea>
+			</div>
+			
+			<div class="clearfix mVs fright">
+				<input type="submit" name="action" value="next" />
+			</div>
+		</form>
+	</div>
+</div>

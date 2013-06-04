@@ -1,6 +1,9 @@
 $(document).ready(function() {
 	Cufon.replace('h1', { fontFamily: 'HoeflerTitlingRoman' });	
 	Cufon.replace('.topPointer', { fontFamily: 'Arvil Sans' });
+
+	var heightWrap = $(".formWrap").css("height");
+	$('.sidePanel').css({"height": heightWrap});
 	
 	//cloning of service container div
 	$('#add_service').click(function(){
@@ -44,6 +47,5 @@ $(document).ready(function() {
 	$('#confirm').click(function(){
 		$.php('/ajax/careers/insertApplication', {});
 	});
-	
 	
 });
